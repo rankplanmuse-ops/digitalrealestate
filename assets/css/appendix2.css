@@ -42,7 +42,24 @@
 body.v2 .site-header {
   position: static;
   background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(23 * var(--u));
+  padding: calc(26 * var(--u)) calc(50 * var(--u)) calc(18 * var(--u));
 }
+
+/* The main header's children are absolutely positioned against the fixed
+   header on the book page; inside the v2 stack they must flow normally
+   (same trick the main stylesheet itself uses for its mobile header),
+   otherwise the header collapses to zero height and the logo, nav and
+   CTA float over the article text. */
+body.v2 .site-header > * {
+  position: static;
+  transform: none;
+}
+
+body.v2 .nav { flex-wrap: nowrap; }
 
 /* --- Chapter / topic menu tabs ------------------------------------------ */
 
@@ -50,7 +67,7 @@ body.v2 .site-header {
   background: var(--bg);
   border-top: 1px solid var(--r-line);
   border-bottom: 1px solid var(--r-line);
-  padding: 0.6rem 0;
+  padding: 0.6rem calc(50 * var(--u));
   margin-bottom: 2.75rem;
 }
 
@@ -260,6 +277,10 @@ a.r-row-title:hover { color: var(--orange); }
 
 @media (max-width: 820px), (max-aspect-ratio: 1/1) {
   .doc2 { padding-top: 1.75rem; padding-left: 1.25rem; padding-right: 1.25rem; }
+  body.v2 .site-header { flex-wrap: wrap; padding: 1.1rem 1.25rem 0.8rem; row-gap: 0.6rem; }
+  body.v2 .logo { width: 6.5rem; }
+  body.v2 .nav { order: 3; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .chapbar { padding-left: 1.25rem; padding-right: 1.25rem; }
   .r-title { font-size: 2rem; line-height: 1.18; }
   .r-h2 { font-size: 1.6rem; }
   .r-lede, .prose { font-size: 1.0625rem; line-height: 1.65; }
