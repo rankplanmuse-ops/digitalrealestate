@@ -12,7 +12,9 @@ class I18n {
     }
 
     try {
-      const response = await fetch(`assets/js/lang/${lang}.json`);
+      const self = document.querySelector('script[src$="assets/js/i18n.js"]');
+      const base = self ? self.getAttribute('src').replace(/assets\/js\/i18n\.js$/, '') : '';
+      const response = await fetch(`${base}assets/js/lang/${lang}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load ${lang}.json`);
       }
