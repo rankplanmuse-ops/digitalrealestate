@@ -151,25 +151,34 @@ body.v2 .nav { flex-wrap: nowrap; }
 /* Chapters menu: just the chapter numbers, one horizontal row. */
 .chnums { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.4rem 0 0.6rem; }
 
+/* Chapter numbers are buttons in the exact style of the menu tab
+   buttons above them (same font, size, padding, border, colors). */
 .chnum {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.6rem;
-  height: 2.6rem;
-  padding: 0 0.4rem;
   font-family: var(--r-sans);
-  font-size: 0.95rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--r-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--r-muted);
+  background: transparent;
   border: 1px solid #333333;
+  padding: 0.55em 0.95em;
 }
 
-.chnum:hover { color: var(--orange); border-color: var(--orange); }
+.chnum:hover { color: var(--r-head); border-color: var(--r-muted); }
 
 /* .tabpanel a is a space-between row for the text panels; the number
    chips need centered content instead. */
-.tabpanel a.chnum { justify-content: center; align-items: center; }
+.tabpanel a.chnum {
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  padding: 0.55em 0.95em;
+}
 
 .tabpanel .cnt {
   font-family: var(--r-sans);
