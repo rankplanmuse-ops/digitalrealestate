@@ -32,6 +32,10 @@
    background, so scrolled text is cut off at the submenu's bottom line
    and never shows through or underneath. No height measuring involved.
    The main site and v1 keep the original transparent fixed header. */
+/* The full-screen orange frame (z-index 40 in styles.css) must stay on
+   top of the sticky stack (z-index 45), never blocked by it. */
+body.v2 .frame { z-index: 80; }
+
 .v2-stack {
   position: sticky;
   top: 0;
@@ -67,8 +71,12 @@ body.v2 .nav { flex-wrap: nowrap; }
   background: var(--bg);
   border-top: 1px solid var(--r-line);
   border-bottom: 1px solid var(--r-line);
-  padding: 0.6rem calc(50 * var(--u));
-  margin-bottom: 2.75rem;
+  /* The submenu lives on the content column, not edge to edge: same
+     max-width and side padding as .doc2, so tabs and panels line up
+     exactly with the article text. */
+  max-width: 47.5rem;
+  margin: 0 auto 2.75rem;
+  padding: 0.6rem 1.5rem;
 }
 
 .chapbar-tabs { display: flex; gap: 0.5rem; }
@@ -139,6 +147,29 @@ body.v2 .nav { flex-wrap: nowrap; }
 .fchip[aria-pressed="true"] { color: var(--orange); border-color: var(--orange); }
 
 .fstatus { margin: 0 0 0.6rem; }
+
+/* Chapters menu: just the chapter numbers, one horizontal row. */
+.chnums { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.4rem 0 0.6rem; }
+
+.chnum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  padding: 0 0.4rem;
+  font-family: var(--r-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--r-text);
+  border: 1px solid #333333;
+}
+
+.chnum:hover { color: var(--orange); border-color: var(--orange); }
+
+/* .tabpanel a is a space-between row for the text panels; the number
+   chips need centered content instead. */
+.tabpanel a.chnum { justify-content: center; align-items: center; }
 
 .tabpanel .cnt {
   font-family: var(--r-sans);
