@@ -18,6 +18,7 @@
 <body data-active="appendix" class="v2">
     <div class="frame" aria-hidden="true"></div>
 
+    <div class="v2-stack">
     <header class="site-header">
         <a class="logo" href="../../../" aria-label="Digital Real Estate">
             <img src="../../../assets/img/logo-title.svg" width="228" height="103" alt="Digital Real Estate">
@@ -33,7 +34,6 @@
         <a class="btn btn--sm header-cta" href="https://www.amazon.com/Digital-Real-Estate-Development-Investing/dp/B0HHSGBY6S" target="_blank" rel="noopener" data-i18n="buyBook">Buy the book here</a>
     </header>
 
-    <main class="doc2">
         <div class="chapbar">
             <div class="chapbar-tabs" role="group" aria-label="Appendix menus">
                 <button type="button" class="tab-btn" data-tabbtn="panel-chapters" aria-expanded="false">Chapters</button>
@@ -156,17 +156,6 @@
             </div>
         </div>
         <script>
-        (function () {
-          var header = document.querySelector('.site-header');
-          function setChapTop() {
-            if (header) {
-              document.documentElement.style.setProperty('--chapTop', header.getBoundingClientRect().height + 'px');
-            }
-          }
-          setChapTop();
-          window.addEventListener('resize', setChapTop);
-          window.addEventListener('load', setChapTop);
-        })();
         document.querySelectorAll('[data-tabbtn]').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var panel = document.getElementById(btn.getAttribute('data-tabbtn'));
@@ -202,6 +191,9 @@
         });
         });
         </script>
+    </div>
+
+    <main class="doc2">
         <p class="r-back"><a href="../../../appendix2/">← All sources</a></p>
         <p class="r-eyebrow" style="margin-top:1.6rem">Podcast · The Great Simplification</p>
         <h1 class="r-title">Edward Chancellor: The Price of Time</h1>
