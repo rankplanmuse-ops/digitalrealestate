@@ -15,7 +15,7 @@
     <script src="../../../assets/js/nav.js" defer></script>
     <script src="../../../assets/js/i18n.js" defer></script>
 </head>
-<body data-active="appendix">
+<body data-active="appendix" class="v2">
     <div class="frame" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -38,6 +38,8 @@
             <div class="chapbar-tabs" role="group" aria-label="Appendix menus">
                 <button type="button" class="tab-btn" data-tabbtn="panel-chapters" aria-expanded="false">Chapters</button>
                 <button type="button" class="tab-btn" data-tabbtn="panel-topics" aria-expanded="false">Topics</button>
+                <button type="button" class="tab-btn" data-tabbtn="panel-featured" aria-expanded="false">Featured</button>
+                <button type="button" class="tab-btn" data-tabbtn="panel-all" aria-expanded="false">All sources</button>
             </div>
             <div class="tabpanel" id="panel-chapters" hidden>
                 <div class="tabpanel-group">
@@ -84,8 +86,87 @@
                     <a href="../../../appendix2/topics/technology-monetary-futures/"><span>Technology &amp; Monetary Futures</span><span class="cnt">10 sources</span></a>
                 </div>
             </div>
+            <div class="tabpanel" id="panel-featured" hidden>
+                <div class="tabpanel-group">
+                    <p class="tabpanel-h">The essential ten</p>
+                    <a href="../../../appendix2/sources/tftc-bitcoin-absorbs-real-estate/"><span>No. 1 · How Bitcoin Absorbs the $250 Trillion Real Estate Market</span><span class="cnt">Video</span></a>
+                    <a href="../../../appendix2/sources/wsb-btc164-bitcoin-real-estate/"><span>No. 2 · Bitcoin &amp; Real Estate w/ Leon Wankum (BTC164)</span><span class="cnt">Podcast</span></a>
+                    <a href="../../../appendix2/sources/jesse-myers-200-trillion/"><span>No. 3 · How Bitcoin's Total Value Could Top $200 Trillion (BFM096)</span><span class="cnt">Podcast</span></a>
+                    <a href="../../../appendix2/sources/btc199-collateral-real-estate/"><span>No. 4 · Bitcoin's Collateral in Real Estate (BTC199)</span><span class="cnt">Podcast</span></a>
+                    <a href="../../../appendix2/sources/tftc-cre-playbook/"><span>No. 5 · Bitcoin Playbook for Commercial Real Estate Owners</span><span class="cnt">Video</span></a>
+                    <a href="../../../appendix2/sources/slp654-bitcoin-vs-gold/"><span>No. 6 · Bitcoin vs Gold: The Future of Monetary Assets (SLP654)</span><span class="cnt">Podcast</span></a>
+                    <a href="../../../appendix2/sources/rochard-energy-survey/"><span>No. 7 · Bitcoin Energy Survey and the Speculative Attack</span><span class="cnt">Podcast</span></a>
+                    <a href="../../../appendix2/sources/walton-credit-gold-rush/"><span>No. 8 · The Bitcoin Credit Gold Rush</span><span class="cnt">Video</span></a>
+                    <a href="../../../appendix2/sources/bitcoin-urbanism-panel/"><span>No. 9 · Bitcoin Urbanism</span><span class="cnt">Video</span></a>
+                    <a href="../../../appendix2/sources/booth-bfm111-deflation/"><span>No. 10 · The Future of Bitcoin: AI, Deflation &amp; Abundance (BFM111)</span><span class="cnt">Podcast</span></a>
+                </div>
+            </div>
+            <div class="tabpanel tabpanel--scroll" id="panel-all" hidden>
+                <div class="filterwrap">
+                    <div class="fchips" role="group" aria-label="Filter sources by format">
+                        <button type="button" class="fchip" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" class="fchip" data-filter="video" aria-pressed="false">Video</button>
+                        <button type="button" class="fchip" data-filter="podcast" aria-pressed="false">Podcast</button>
+                        <button type="button" class="fchip" data-filter="article" aria-pressed="false">Article</button>
+                        <button type="button" class="fchip" data-filter="paper" aria-pressed="false">Paper</button>
+                        <button type="button" class="fchip" data-filter="newsletter" aria-pressed="false">Newsletter</button>
+                    </div>
+                    <p class="fstatus r-stats">In order of first appearance · 40 shown</p>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/tftc-bitcoin-absorbs-real-estate/"><span>How Bitcoin Absorbs the $250 Trillion Real Estate Market</span><span class="cnt">Video · TFTC</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/wsb-btc164-bitcoin-real-estate/"><span>Bitcoin &amp; Real Estate w/ Leon Wankum (BTC164)</span><span class="cnt">Podcast · We Study Billionaires</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/wankum-immobilien-enteignung/"><span>Zwischen Immobilien, Enteignung und Bitcoin</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/bitcoin-mstr-destroys-property/"><span>Why Bitcoin &amp; MSTR Destroys the $300T Property Market</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/btc199-collateral-real-estate/"><span>Bitcoin's Collateral in Real Estate (BTC199)</span><span class="cnt">Podcast · We Study Billionaires</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/jesse-myers-200-trillion/"><span>How Bitcoin's Total Value Could Top $200 Trillion (BFM096)</span><span class="cnt">Podcast · Bitcoin for Millennials</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/sprott-nixon-shock/"><span>The 50th Anniversary of the Nixon Shock</span><span class="cnt">Podcast · Sprott Podcast</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/tftc-cre-playbook/"><span>Bitcoin Playbook for Commercial Real Estate Owners</span><span class="cnt">Video · TFTC</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/cardone-volatile-pair/"><span>Bitcoin Is Volatile. Here's Why I Still Pair It With Real Estate</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/cardone-institutional/"><span>Bitcoin, Real Estate and the Future of Institutional Investing</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/rent-in-bitcoin/"><span>Paying Rent in Bitcoin Will Change Real Estate Forever</span><span class="cnt">Podcast · Apple Podcasts</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/slp348-luxor-hashrate/"><span>Bitcoin Mining Narratives &amp; Hash Rate Derivatives (SLP348)</span><span class="cnt">Podcast · Stephan Livera Podcast</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/slp654-bitcoin-vs-gold/"><span>Bitcoin vs Gold: The Future of Monetary Assets (SLP654)</span><span class="cnt">Podcast · Stephan Livera Podcast</span></a>
+                    <a data-srcrow data-format="research" data-news="0" href="../../../appendix2/sources/glassnode-production-cost/"><span>Estimating the Cost of Bitcoin Production</span><span class="cnt">Research · Glassnode Insights</span></a>
+                    <a data-srcrow data-format="article" data-news="0" href="../../../appendix2/sources/schwab-mining-cost-bottom/"><span>Schwab Strategist: Bitcoin's $60,000 Mining Cost Could Mark the Cycle Bottom</span><span class="cnt">Article · Bitcoin Magazine</span></a>
+                    <a data-srcrow data-format="article" data-news="0" href="../../../appendix2/sources/zerohedge-saylor-dip/"><span>Saylor's Strategy Buys the Dip as Bitcoin Nears Mining Cost Floor</span><span class="cnt">Article · ZeroHedge</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/wankum-navigating-shift/"><span>Navigating the Shift from Real Estate to Bitcoin</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/your-life-your-terms-wankum/"><span>How Do Bitcoin &amp; Real Estate Evolve Together?</span><span class="cnt">Podcast · The Your Life! Your Terms! Show</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/bitcoin-university-speculative-attack/"><span>Bitcoin Speculative Attack (explainer)</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/rochard-energy-survey/"><span>Bitcoin Energy Survey and the Speculative Attack</span><span class="cnt">Podcast · We Study Billionaires</span></a>
+                    <a data-srcrow data-format="article" data-news="0" href="../../../appendix2/sources/think-bitcoin-civilizational/"><span>The Speculative Attack as Civilizational Event</span><span class="cnt">Article · Think Bitcoin Podcast</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/bitcoin-audible-speculative-attack/"><span>Read_471 – The Speculative Attack</span><span class="cnt">Podcast · Bitcoin Audible</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/walton-credit-gold-rush/"><span>The Bitcoin Credit Gold Rush</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/walton-mstr-shakeout/"><span>MSTR, Bitcoin Treasuries &amp; The Shakeout</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/wsb-btc217-microstrategy-2025/"><span>MicroStrategy 2025 w/ Jeff Walton (BTC217)</span><span class="cnt">Podcast · We Study Billionaires</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/gerovich-japan-standard/"><span>Building Japan's Bitcoin Standard w/ Simon Gerovich</span><span class="cnt">Video · Bitcoin Magazine</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/tip505-price-of-time/"><span>Interest Rates: The Price of Time (TIP505)</span><span class="cnt">Podcast · We Study Billionaires</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/great-simplification-chancellor/"><span>Edward Chancellor: The Price of Time</span><span class="cnt">Podcast · The Great Simplification</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/ttu-history-of-interest/"><span>The History of Interest &amp; the Next Devastating Crisis</span><span class="cnt">Podcast · Top Traders Unplugged</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/bitcoin-urbanism-panel/"><span>Bitcoin Urbanism</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="video" data-news="0" href="../../../appendix2/sources/demeester-architecture/"><span>Bitcoin Will Transform Architecture</span><span class="cnt">Video · YouTube</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/what-is-bitcoin-urbanism/"><span>What Is Bitcoin Urbanism?</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="podcast" data-news="0" href="../../../appendix2/sources/booth-bfm111-deflation/"><span>The Future of Bitcoin: AI, Deflation &amp; Abundance (BFM111)</span><span class="cnt">Podcast · Bitcoin for Millennials</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/wankum-bitcoin-and-ai/"><span>Bitcoin and AI</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/price-of-tomorrow-review/"><span>The Price of Tomorrow: Why Deflation Is the Key to an Abundant Future</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/tdb-deflationary-future/"><span>TD₿: Bitcoin and Our Deflationary Future</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/tdb-inflation-fights-innovation/"><span>TD₿: Inflation Fights Innovation</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/tdb-repricing-system/"><span>TD₿: Jeff Booth – Bitcoin Is Repricing the Entire System</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/ai-unchained/"><span>AI Unchained</span><span class="cnt">Article · Substack</span></a>
+                    <a data-srcrow data-format="article" data-news="1" href="../../../appendix2/sources/gentile-deflation-prosperity/"><span>Deflation Is the Key to Future Prosperity</span><span class="cnt">Article · Substack</span></a>
+                </div>
+            </div>
         </div>
         <script>
+        (function () {
+          var header = document.querySelector('.site-header');
+          function setChapTop() {
+            if (header) {
+              document.documentElement.style.setProperty('--chapTop', header.getBoundingClientRect().height + 'px');
+            }
+          }
+          setChapTop();
+          window.addEventListener('resize', setChapTop);
+          window.addEventListener('load', setChapTop);
+        })();
         document.querySelectorAll('[data-tabbtn]').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var panel = document.getElementById(btn.getAttribute('data-tabbtn'));
@@ -94,6 +175,31 @@
             document.querySelectorAll('[data-tabbtn]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
             if (!open) { panel.hidden = false; btn.setAttribute('aria-expanded', 'true'); }
           });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.filterwrap').forEach(function (wrap) {
+          var chips = wrap.querySelectorAll('[data-filter]');
+          var rows = wrap.querySelectorAll('[data-srcrow]');
+          var status = wrap.querySelector('.fstatus');
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+              chip.setAttribute('aria-pressed', 'true');
+              var f = chip.getAttribute('data-filter');
+              var shown = 0;
+              rows.forEach(function (row) {
+                var match = false;
+                if (f === 'all') { match = true; }
+                if (f === 'newsletter') { match = row.getAttribute('data-news') === '1'; }
+                if (f === 'paper') { match = row.getAttribute('data-format') === 'research'; }
+                if (f === 'video' || f === 'podcast' || f === 'article') { match = row.getAttribute('data-format') === f; }
+                row.style.display = match ? '' : 'none';
+                if (match) { shown++; }
+              });
+              if (status) { status.textContent = 'In order of first appearance · ' + shown + ' shown'; }
+            });
+          });
+        });
         });
         </script>
         <p class="r-back"><a href="../../../appendix2/">← All sources</a></p>
@@ -112,55 +218,55 @@
         <section class="r-section" aria-labelledby="srcs-h">
             <h2 class="r-h2" id="srcs-h">Sources in this chapter</h2>
             <ul class="r-list">
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="video" data-news="0">
                         <p class="r-meta"><span><span class="r-meta-accent">No. 1</span> · Video · TFTC</span><span>Real Estate &amp; Housing · Money &amp; Store of Value</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/tftc-bitcoin-absorbs-real-estate/">How Bitcoin Absorbs the $250 Trillion Real Estate Market</a>
                         <p class="r-authors">Leon Wankum, Marty Bent</p>
                         <p class="r-note">The clearest single introduction to the book's thesis: property's monetary premium migrating into bitcoin.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="podcast" data-news="0">
                         <p class="r-meta"><span><span class="r-meta-accent">No. 10</span> · Podcast · Bitcoin for Millennials</span><span>Technology &amp; Monetary Futures · Money &amp; Store of Value</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/booth-bfm111-deflation/">The Future of Bitcoin: AI, Deflation &amp; Abundance (BFM111)</a>
                         <p class="r-authors">Jeff Booth</p>
                         <p class="r-note">Booth's core argument that technology is deflationary and money should let it be.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/wankum-bitcoin-and-ai/">Bitcoin and AI</a>
                         <p class="r-authors">Leon Wankum</p>
                         <p class="r-note">The author's own essay on AI productivity meeting hard money.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/price-of-tomorrow-review/">The Price of Tomorrow: Why Deflation Is the Key to an Abundant Future</a>
                         <p class="r-authors">Bitcoin Mindset</p>
                         <p class="r-note">A concise book review of Jeff Booth's The Price of Tomorrow.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/tdb-deflationary-future/">TD₿: Bitcoin and Our Deflationary Future</a>
                         <p class="r-authors">Daily Bitcoiner</p>
                         <p class="r-note">Notes on Booth's conversation with Stephan Livera.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/tdb-inflation-fights-innovation/">TD₿: Inflation Fights Innovation</a>
                         <p class="r-authors">Daily Bitcoiner</p>
                         <p class="r-note">Notes on Booth with Robert Breedlove.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures · Money &amp; Store of Value</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/tdb-repricing-system/">TD₿: Jeff Booth – Bitcoin Is Repricing the Entire System</a>
                         <p class="r-authors">Daily Bitcoiner</p>
                         <p class="r-note">Summary of Booth's repricing argument.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/ai-unchained/">AI Unchained</a>
                         <p class="r-authors">Rick Stringer</p>
                         <p class="r-note">On Guy Swann's show exploring open AI and bitcoin.</p>
                     </li>
-                    <li class="r-row">
+                    <li class="r-row" data-srcrow data-format="article" data-news="1">
                         <p class="r-meta"><span>Article · Substack</span><span>Technology &amp; Monetary Futures</span></p>
                         <a class="r-row-title" href="../../../appendix2/sources/gentile-deflation-prosperity/">Deflation Is the Key to Future Prosperity</a>
                         <p class="r-authors">Brandon Gentile</p>

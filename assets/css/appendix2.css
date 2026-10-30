@@ -26,11 +26,16 @@
   color: var(--r-text);
 }
 
+/* On v2 pages the site header gets the solid page background, so scrolled
+   text is cut off at the header and at the sticky submenu line below it,
+   never visible underneath either. */
+body.v2 .site-header { background: var(--bg); }
+
 /* --- Chapter / topic menu tabs ------------------------------------------ */
 
 .chapbar {
   position: sticky;
-  top: calc(188 * var(--u));
+  top: var(--chapTop, calc(188 * var(--u)));
   z-index: 30;
   background: var(--bg);
   border-top: 1px solid var(--r-line);
@@ -85,6 +90,28 @@
 }
 
 .tabpanel a:hover { color: var(--orange); }
+
+.tabpanel--scroll { max-height: 55vh; overflow-y: auto; }
+
+.fchips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.9rem; }
+
+.fchip {
+  font-family: var(--r-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--r-muted);
+  background: transparent;
+  border: 1px solid #333333;
+  padding: 0.5em 0.85em;
+  cursor: pointer;
+}
+
+.fchip:hover { color: var(--r-head); border-color: var(--r-muted); }
+.fchip[aria-pressed="true"] { color: var(--orange); border-color: var(--orange); }
+
+.fstatus { margin: 0 0 0.6rem; }
 
 .tabpanel .cnt {
   font-family: var(--r-sans);
@@ -223,7 +250,6 @@ a.r-row-title:hover { color: var(--orange); }
 
 @media (max-width: 820px), (max-aspect-ratio: 1/1) {
   .doc2 { padding-top: 1.5rem; padding-left: 1.25rem; padding-right: 1.25rem; }
-  .chapbar { position: static; }
   .r-title { font-size: 2rem; line-height: 1.18; }
   .r-h2 { font-size: 1.6rem; }
   .r-lede, .prose { font-size: 1.0625rem; line-height: 1.65; }
