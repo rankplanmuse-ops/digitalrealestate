@@ -14,7 +14,7 @@ class I18n {
     try {
       const self = document.querySelector('script[src$="assets/js/i18n.js"]');
       const base = self ? self.getAttribute('src').replace(/assets\/js\/i18n\.js$/, '') : '';
-      const response = await fetch(`${base}assets/js/lang/${lang}.json`);
+      const response = await fetch(`${base}assets/js/lang/${lang}.json`, { cache: 'no-cache' });
       if (!response.ok) {
         throw new Error(`Failed to load ${lang}.json`);
       }
@@ -99,6 +99,12 @@ class I18n {
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       const translation = this.t(key);
+      // Missing key (e.g. a stale cached language file): t() returns the
+      // key itself. Keep the element's baked-in fallback text instead of
+      // rendering the raw key into the page.
+      if (translation === key) {
+        return;
+      }
       
       if (element.tagName === 'INPUT' && element.type === 'text') {
         element.placeholder = translation;
@@ -110,7 +116,10 @@ class I18n {
     });
 
     // Update document title
-    document.title = this.t('siteTitle');
+    const siteTitle = this.t('siteTitle');
+    if (siteTitle !== 'siteTitle') {
+      document.title = siteTitle;
+    }
   }
 
   updatePortfolioSummary() {
