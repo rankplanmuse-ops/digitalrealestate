@@ -609,3 +609,27 @@ body[data-active="book"] .header-cta {
   .canvas:has(.appendix-cta) { align-items: center; text-align: center; }
   .appendix-text br { display: none; }
 }
+
+/* Appendix version dropdown: the bar shows only "Appendix I"; II, III and
+   IV sit in a menu under it (hover, keyboard focus, or the caret button). */
+.nav-drop { position: relative; display: inline-flex; align-items: center; gap: 0.15em; }
+.nav-drop-btn {
+  background: none; border: 0; padding: 0 0.1em; cursor: pointer;
+  color: inherit; font: inherit; line-height: 1;
+}
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.55em);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 0.55em;
+  background: var(--bg);
+  border: max(2px, calc(2.5 * var(--u))) solid var(--orange);
+  padding: 0.75em 1.1em;
+  z-index: 50;
+}
+.nav-drop:hover .nav-menu,
+.nav-drop:focus-within .nav-menu,
+.nav-drop.open .nav-menu { display: flex; }

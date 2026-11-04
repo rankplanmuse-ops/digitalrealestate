@@ -27,3 +27,29 @@
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+// Appendix version dropdown: the caret button toggles the version menu
+// (hover and keyboard focus also open it, via CSS); closes on an outside
+// click or Escape.
+(function () {
+  const drop = document.querySelector('.nav-drop');
+  if (!drop) return;
+  const btn = drop.querySelector('.nav-drop-btn');
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = drop.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (e) => {
+    if (!drop.contains(e.target)) {
+      drop.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      drop.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();

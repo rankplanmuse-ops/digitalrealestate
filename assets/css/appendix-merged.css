@@ -1,79 +1,51 @@
 /* ==========================================================================
-   Digital Real Estate: Appendix v3, the merged single page
-   (appendix3/index.html)
-
-   Two rules govern this page (user feedback, 2026-11-04):
-   1. The table of contents is a boxed panel with one-line entries, so
-      the menu is unmistakably separate from the content below it.
-   2. Only three fixed font sizes on the whole page, like the book:
-      headings 30px, labels and contents 15px, body text 17px.
-      Color and case create the finer hierarchy, never size.
+   Digital Real Estate: merged single-page appendix (appendix/index.html)
+   Structure-only rules on top of appendix.css: part blocks, chapter blocks
+   and in-chapter section titles. Same tokens, no new colors, no new fonts.
+   Desktop font-size right-sizing for the long page lives in the media
+   query at the bottom (mobile keeps the v1 sizes untouched).
    ========================================================================== */
 
-/* ---- Structure ---- */
 .m-part { margin-top: 4.5rem; }
 
-.m-chapter {
-  margin-top: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  padding-top: 2.2rem;
-}
-.m-part .m-chapter:first-of-type { border-top: none; padding-top: 0; }
+.m-chapter { margin-top: 3.5rem; }
+.m-part .m-chapter:first-of-type { margin-top: 2.5rem; }
 
-.m-chapter-title { margin: 0.3em 0 0.45em; }
+.m-chapter-title {
+  font-size: var(--fs-m);
+  line-height: var(--lh);
+  margin: 0.3em 0 0.45em;
+}
+
 .m-sec-title { margin-top: 2rem; }
-.m-back { margin-top: 2.5rem; }
 
 /* Anchor jumps land below the frame's top edge, not under it. */
 .appendix-merged [id] { scroll-margin-top: 2rem; }
+
+/* Desktop type scale for the long merged page (821px+ landscape only;
+   mobile keeps the v1 sizes untouched). Reconciled from two independent
+   reviews of the v1 desktop screenshot, Gemini and Duck AI (GPT-6 Luna),
+   2026-11-03: both said the fluid main-site scale (title 56px, lede and
+   source titles 39px, notes 27.6px at 1440x900) is poster-sized for a
+   16-chapter reference page. Applied values sit between the two scales,
+   leaning to Gemini on headings (condensed face carries larger sizes)
+   and to the shared middle on text:
+   title 48, lede 20/1.5, part heading 30, chapter title 26, section
+   heading 20, body 18/1.6, source title 18, meta 13, author 14,
+   note 15/1.55, eyebrow and contents part labels 13-15. */
 @media (min-width: 821px) and (min-aspect-ratio: 1/1) {
   .appendix-merged [id] { scroll-margin-top: 8rem; }
+  .appendix-merged .doc-title { font-size: 48px; }
+  .appendix-merged .doc-lede { font-size: 20px; line-height: 1.5; }
+  .appendix-merged .doc-h2 { font-size: 30px; }
+  .appendix-merged .doc-h3 { font-size: 15px; }
+  .appendix-merged .m-sec-title { font-size: 20px; }
+  .appendix-merged .m-chapter-title { font-size: 26px; }
+  .appendix-merged .doc-text { font-size: 18px; line-height: 1.6; }
+  .appendix-merged .doc-eyebrow { font-size: 13px; }
+  .appendix-merged .src-title { font-size: 18px; line-height: 1.35; }
+  .appendix-merged .src-meta { font-size: 13px; }
+  .appendix-merged .src-byline { font-size: 14px; }
+  .appendix-merged .src-note { font-size: 15px; line-height: 1.55; }
+  .appendix-merged .chip { font-size: 13px; }
 }
-
-/* ---- Table of contents: a menu, not content ---- */
-.toc {
-  border: 1px solid rgba(247, 147, 26, 0.55);
-  background: #151515;
-  padding: 1.4rem 1.6rem 1.6rem;
-  margin-top: 3rem;
-}
-.toc-head { color: var(--orange); text-transform: uppercase; }
-.toc-part { color: var(--orange); text-transform: uppercase; margin: 1.15rem 0 0.3rem; }
-.toc-head + .toc-part { margin-top: 0.7rem; }
-.toc-list { list-style: none; margin: 0; padding: 0; }
-.toc-list a {
-  display: flex;
-  gap: 0.7rem;
-  align-items: baseline;
-  padding: 0.3rem 0;
-  color: #ffffff;
-}
-.toc-list a:hover { color: var(--orange); }
-.toc-num { color: var(--orange); min-width: 1.7em; flex-shrink: 0; }
-
-/* ---- The three fixed sizes ---- */
-/* Headings: page title, part headings, chapter titles */
-.appendix-merged .doc-title,
-.appendix-merged .doc-h2,
-.appendix-merged .m-chapter-title { font-size: 30px; line-height: 1.05; }
-
-/* Labels and contents: eyebrows, section labels, source meta,
-   contents entries, chips, back links */
-.appendix-merged .doc-eyebrow,
-.appendix-merged .doc-h3,
-.appendix-merged .m-sec-title,
-.appendix-merged .src-meta,
-.appendix-merged .chip,
-.appendix-merged .doc-back,
-.appendix-merged .toc-head,
-.appendix-merged .toc-part,
-.appendix-merged .toc-list a { font-size: 15px; line-height: 1.4; }
-
-/* Body text: lede, chapter editorials, article text, source titles,
-   author lines and notes */
-.appendix-merged .doc-lede,
-.appendix-merged .doc-text,
-.appendix-merged .src-title,
-.appendix-merged .src-byline,
-.appendix-merged .src-note { font-size: 17px; line-height: 1.6; }
-.appendix-merged .src-title { line-height: 1.35; }
