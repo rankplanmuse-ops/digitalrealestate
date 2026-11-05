@@ -1,13 +1,15 @@
 /* ==========================================================================
-   Digital Real Estate: Appendix v3, the merged single page
-   (appendix3/index.html)
+   Digital Real Estate: Appendix IV, the merged single page
+   (appendix4/index.html)
 
-   Two rules govern this page (user feedback, 2026-11-04):
-   1. The table of contents is a boxed panel with one-line entries, so
-      the menu is unmistakably separate from the content below it.
-   2. Only three fixed font sizes on the whole page, like the book:
-      headings 30px, labels and contents 15px, body text 17px.
-      Color and case create the finer hierarchy, never size.
+   Structure (2026-11-04): the table of contents is a boxed panel with
+   one-line entries, so the menu is unmistakably separate from the
+   content below it; chapters are separated by rules and each part
+   ends with a back-to-contents link.
+   Type (user, 2026-11-05): the font sizes of Appendix III (the
+   reconciled Gemini + Duck AI desktop scale), because they read
+   easier than the three fixed sizes IV started with. The category
+   line above each source title is light grey, not orange.
    ========================================================================== */
 
 /* ---- Structure ---- */
@@ -51,29 +53,35 @@
 .toc-list a:hover { color: var(--orange); }
 .toc-num { color: var(--orange); min-width: 1.7em; flex-shrink: 0; }
 
-/* ---- The three fixed sizes ---- */
-/* Headings: page title, part headings, chapter titles */
-.appendix-merged .doc-title,
-.appendix-merged .doc-h2,
-.appendix-merged .m-chapter-title { font-size: 30px; line-height: 1.05; }
+/* ---- Type scale: the Appendix III sizes (user, 2026-11-05) ---- */
+/* Contents entries and labels at base width; the desktop scale below
+   matches appendix-merged.css value for value. Below the desktop
+   breakpoint the fluid v1 sizes from appendix.css apply, as on III. */
+.appendix-merged .toc-head { font-size: 13px; }
+.appendix-merged .toc-part { font-size: 13px; }
+.appendix-merged .toc-list a { font-size: 17px; line-height: 1.45; }
+.appendix-merged .doc-back { font-size: 15px; }
 
-/* Labels and contents: eyebrows, section labels, source meta,
-   contents entries, chips, back links */
-.appendix-merged .doc-eyebrow,
-.appendix-merged .doc-h3,
-.appendix-merged .m-sec-title,
-.appendix-merged .src-meta,
-.appendix-merged .chip,
-.appendix-merged .doc-back,
-.appendix-merged .toc-head,
-.appendix-merged .toc-part,
-.appendix-merged .toc-list a { font-size: 15px; line-height: 1.4; }
+@media (min-width: 821px) and (min-aspect-ratio: 1/1) {
+  .appendix-merged .doc-title { font-size: 48px; }
+  .appendix-merged .doc-lede { font-size: 20px; line-height: 1.5; }
+  .appendix-merged .doc-h2 { font-size: 30px; }
+  .appendix-merged .doc-h3 { font-size: 15px; }
+  .appendix-merged .m-sec-title { font-size: 20px; }
+  .appendix-merged .m-chapter-title { font-size: 26px; }
+  .appendix-merged .doc-text { font-size: 18px; line-height: 1.6; }
+  .appendix-merged .doc-eyebrow { font-size: 13px; }
+  .appendix-merged .src-title { font-size: 18px; line-height: 1.35; }
+  .appendix-merged .src-meta { font-size: 13px; }
+  .appendix-merged .src-byline { font-size: 14px; }
+  .appendix-merged .src-note { font-size: 15px; line-height: 1.55; }
+  .appendix-merged .chip { font-size: 13px; }
+  .appendix-merged .toc-head { font-size: 15px; }
+  .appendix-merged .toc-part { font-size: 13px; }
+  .appendix-merged .toc-list a { font-size: 18px; }
+  .appendix-merged .doc-back { font-size: 15px; }
+}
 
-/* Body text: lede, chapter editorials, article text, source titles,
-   author lines and notes */
-.appendix-merged .doc-lede,
-.appendix-merged .doc-text,
-.appendix-merged .src-title,
-.appendix-merged .src-byline,
-.appendix-merged .src-note { font-size: 17px; line-height: 1.6; }
-.appendix-merged .src-title { line-height: 1.35; }
+/* Category line above each source title (VIDEO · YOUTUBE, PODCAST,
+   ARTICLE, ...): light grey, not orange (user, 2026-11-05). */
+.appendix-merged .src-meta { color: #c9c9c9; }
