@@ -37,7 +37,7 @@ body.v5 .nav { flex-wrap: nowrap; }
   font-family: var(--font); text-transform: uppercase;
   font-size: 3rem; line-height: 1.08; margin: 0 0 1.1rem; color: #fff;
 }
-.v5-title--sm { font-size: 2.3rem; text-transform: none; font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -.01em; }
+.v5-title--sm { font-size: 2.5rem; text-transform: uppercase; font-family: var(--font); font-weight: 600; letter-spacing: .01em; line-height: 1.05; }
 .v5-lede { font-size: 1.2rem; line-height: 1.6; color: #cfcfcf; max-width: 46rem; margin: 0 0 1rem; }
 .v5-body { font-size: 1.06rem; line-height: 1.7; color: #d8d8d8; max-width: 46rem; margin: 0 0 1rem; }
 .v5-h2 {
@@ -189,7 +189,7 @@ body.v5 .nav { flex-wrap: nowrap; }
   body.v5 .header-cta { order: 2; margin-left: auto; }
   body.v5 .nav { order: 3; flex: 1 1 100%; justify-content: center; margin-top: .35rem; }
   .v5-title { font-size: 2.1rem; }
-  .v5-title--sm { font-size: 1.65rem; }
+  .v5-title--sm { font-size: 1.95rem; }
   .v5-lede { font-size: 1.08rem; }
   .v5-navbox { width: 50px; height: 50px; }
   .v5-tab { min-height: 44px; padding: .55rem .9rem; font-size: .88rem; }
@@ -243,11 +243,11 @@ body.v5 .nav { flex-wrap: nowrap; }
 }
 .v5-tag:hover { box-shadow: inset 0 0 0 1px var(--orange); color: var(--orange); }
 .v5-tag .cnt { color: var(--v5-grey); font-size: .85rem; margin-left: .45rem; }
-.v5-crumbs { font-size: .9rem; color: var(--v5-grey); margin: 0 0 1.1rem; }
-.v5-crumbs a { color: #cfcfcf; text-decoration: none; }
+.v5-crumbs { font-size: .9rem; color: #6f6f6f; margin: 0 0 2rem; }
+.v5-crumbs a { color: #9a9a9a; text-decoration: none; }
 .v5-crumbs a:hover { color: var(--orange); }
 .v5-crumbs .sep { margin: 0 .5rem; color: #555; }
-.v5-crumbs [aria-current] { color: var(--v5-grey); }
+.v5-crumbs [aria-current] { color: #6f6f6f; }
 
 /* Chapter sub nav (Appendix II pattern) */
 .chapbar5 { position: sticky; top: 0; z-index: 40; background: var(--bg); border-block: 1px solid var(--v5-line); margin: 0 0 2rem; }
@@ -342,3 +342,10 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-ov-ch .n { color: #8f8f8f; font-size: .95rem; min-width: 1.8rem; }
 .v5-ov-ch .t { font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif; font-size: 1.38rem; line-height: 1.25; color: #f4f4f4; }
 .v5-ov-ch:hover .t { color: var(--orange); }
+
+/* --- Batch 2026-11-09 night: source-page hierarchy calming, status
+       line blanked (space kept) -------------------------------------- */
+.v5-kicker--quiet { color: #6e6e6e; font-weight: 600; }
+.v5-byline--calm { color: #a8a8a8; }
+.v5-facts dd { color: #d5d5d5; }
+.v5-status { visibility: hidden; }
