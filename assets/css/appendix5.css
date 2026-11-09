@@ -99,7 +99,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-card-title { font-family: 'EB Garamond', Garamond, Georgia, serif; font-size: 1.45rem; line-height: 1.25; font-weight: 500; margin: 0 0 .4rem; }
 .v5-card-title a { color: #fff; text-decoration: none; }
 .v5-card-title a:hover { color: var(--orange); }
-.v5-byline { color: var(--orange); font-size: .95rem; margin: 0 0 .55rem; }
+.v5-byline { color: var(--v5-grey); font-size: .95rem; margin: 0 0 .55rem; }
 .v5-byline--big { font-size: 1.1rem; }
 .v5-note { font-size: .99rem; line-height: 1.6; color: #c9c9c9; margin: 0 0 .8rem; }
 .v5-card-links { margin: 0; }
@@ -403,7 +403,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 }
 
 /* Part icons (orange skyline progression, 2026-11-09) */
-.v5-particon { display: block; width: 100%; max-width: 30rem; height: auto; margin: .75rem 0 1.5rem; }
+.v5-particon { display: block; width: 100%; max-width: 30rem; height: auto; margin: .35rem 0 1.1rem; }
 .v5-particon--idx { max-width: 21rem; margin: 1.5rem 0 .85rem; }
 .v5-idx-head + .v5-particon--idx { margin-top: .5rem; }
 

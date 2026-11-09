@@ -12,9 +12,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
-    <link rel="stylesheet" href="../../../assets/css/appendix5.css?v=20261109-12">
+    <link rel="stylesheet" href="../../../assets/css/appendix5.css?v=20261109-13">
     <script src="../../../assets/js/nav.js" defer></script>
     <script src="../../../assets/js/i18n.js" defer></script>
+    <script>
+window.V5STR = {"en":{"v5ExtAppendix":"Extended Appendix","v5Back":"Back","v5BackToAppendix":"Back to Extended Appendix","v5SearchContents":"SEARCH & CONTENTS","v5SearchAppendix":"Search the appendix","v5OvPlaceholder":"Titles, authors, chapters, topics, URLs","v5All":"All","v5Sources":"Sources","v5Commentary":"Commentary","v5Chapters":"Chapters","v5AllSources":"All sources","v5Featured":"Featured","v5Topics":"Topics","v5Contents":"Contents","v5Part":"Part","v5Chapter":"Chapter","v5Topic":"Topic","v5ChapterShort":"Ch.","v5NoMatches":"No matches in the appendix.","v5H1":"Every source behind the book, in one place.","v5Lede":"The book Digital Real Estate cites scientific papers, essays talks and podcasts. The Extended Appendix gathers them in a full library, searchable, filterable and playable on the page.","v5ChapterIndex":"Chapter index","v5SearchPlaceholder":"Search title, author, publisher...","v5FilterAll":"All","v5FmtVideo":"Video","v5FmtPodcast":"Podcast","v5FmtArticle":"Article","v5FmtResearch":"Research","v5FmtPaper":"Paper","v5FmtNewsletter":"Newsletter","v5Why":"Why it's included","v5RelatedCommentary":"Related commentary","v5ViewSource":"View source","v5CopyLink":"Copy link","v5Copied":"Copied","v5Details":"Details","v5StatusDocOrder":"In the order of the original document","v5StatusFeatured":"The essential ten, in featured order","v5StatusChapters":"Grouped by chapter, in the book's order","v5StatusTopics":"Grouped by topic","v5Shown":"shown","v5Empty":"No sources match. Clear the search or pick another filter.","v5AlsoInChapter":"Also in this chapter","v5AppearsIn":"Appears in","v5AllTopics":"All topics","v5Format":"Format","v5Publisher":"Publisher","v5Position":"Position in the book","v5NoOf":"No.","v5Of":"of","v5DocOrder":", in the order of the original document","v5Next":"Next","v5OpenOriginal":"Open the original"},"de":{"v5ExtAppendix":"Erweiterter Anhang","v5Back":"Zurück","v5BackToAppendix":"Zurück zum erweiterten Anhang","v5SearchContents":"SUCHE & INHALT","v5SearchAppendix":"Anhang durchsuchen","v5OvPlaceholder":"Titel, Autoren, Kapitel, Themen, URLs","v5All":"Alle","v5Sources":"Quellen","v5Commentary":"Kommentare","v5Chapters":"Kapitel","v5AllSources":"Alle Quellen","v5Featured":"Highlights","v5Topics":"Themen","v5Contents":"Inhalt","v5Part":"Teil","v5Chapter":"Kapitel","v5Topic":"Thema","v5ChapterShort":"Kap.","v5NoMatches":"Keine Treffer im Anhang.","v5H1":"Alle Quellen hinter dem Buch, an einem Ort.","v5Lede":"Das Buch Digital Real Estate zitiert wissenschaftliche Arbeiten, Essays, Vorträge und Podcasts. Der erweiterte Anhang versammelt sie in einer vollständigen Bibliothek, durchsuchbar, filterbar und direkt auf der Seite abspielbar.","v5ChapterIndex":"Kapitelverzeichnis","v5SearchPlaceholder":"Titel, Autor, Herausgeber suchen...","v5FilterAll":"Alle","v5FmtVideo":"Video","v5FmtPodcast":"Podcast","v5FmtArticle":"Artikel","v5FmtResearch":"Studie","v5FmtPaper":"Paper","v5FmtNewsletter":"Newsletter","v5Why":"Warum im Anhang","v5RelatedCommentary":"Zugehöriger Kommentar","v5ViewSource":"Quelle ansehen","v5CopyLink":"Link kopieren","v5Copied":"Kopiert","v5Details":"Details","v5StatusDocOrder":"In der Reihenfolge des Originaldokuments","v5StatusFeatured":"Die wesentlichen zehn, in Reihenfolge der Auswahl","v5StatusChapters":"Nach Kapiteln gruppiert, in der Reihenfolge des Buches","v5StatusTopics":"Nach Themen gruppiert","v5Shown":"angezeigt","v5Empty":"Keine Quellen gefunden. Suche leeren oder anderen Filter wählen.","v5AlsoInChapter":"Ebenfalls in diesem Kapitel","v5AppearsIn":"Enthalten in","v5AllTopics":"Alle Themen","v5Format":"Format","v5Publisher":"Herausgeber","v5Position":"Position im Buch","v5NoOf":"Nr.","v5Of":"von","v5DocOrder":", in der Reihenfolge des Originaldokuments","v5Next":"Weiter","v5OpenOriginal":"Original öffnen"}};
+window.v5lang = function () { try { return localStorage.getItem('lang') || 'en'; } catch (e) { return 'en'; } };
+window.v5t = function (k) { var l = window.v5lang(); return (window.V5STR[l] && window.V5STR[l][k]) || window.V5STR.en[k] || k; };
+window.v5apply = function () {
+  document.querySelectorAll('[data-v5]').forEach(function (el) { var v = window.v5t(el.getAttribute('data-v5')); if (el.hasAttribute('data-v5up')) v = v.toUpperCase(); el.textContent = v; });
+  document.querySelectorAll('[data-v5ph]').forEach(function (el) { el.setAttribute('placeholder', window.v5t(el.getAttribute('data-v5ph'))); });
+};
+document.addEventListener('DOMContentLoaded', window.v5apply);
+window.addEventListener('languageChanged', function () { window.v5apply(); if (window.V5RERENDER) window.V5RERENDER(); });
+</script>
 </head>
 <body class="v5" data-active="appendix">
     <div class="frame" aria-hidden="true"></div>
@@ -44,8 +55,8 @@
 
     <main class="v5-wrap">
 
-        <p class="v5-backrow"><a class="v5-backbtn" href="../../../appendix5/#all-sources"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M20 12H5"/><path d="M11 5l-7 7 7 7"/></svg> Back</a></p>
-        <nav class="v5-crumbs" aria-label="Breadcrumb"><a href="../../../appendix5/">Extended Appendix</a><span class="sep">/</span><a href="../../../appendix5/#all-sources">All sources</a><span class="sep">/</span><span aria-current="page">Zwischen Immobilien, Enteignung und Bitcoin</span></nav>
+        <p class="v5-backrow"><a class="v5-backbtn" href="../../../appendix5/#all-sources"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M20 12H5"/><path d="M11 5l-7 7 7 7"/></svg> <span data-v5="v5Back">Back</span></a></p>
+        <nav class="v5-crumbs" aria-label="Breadcrumb"><a href="../../../appendix5/" data-v5="v5ExtAppendix">Extended Appendix</a><span class="sep">/</span><a href="../../../appendix5/#all-sources" data-v5="v5AllSources">All sources</a><span class="sep">/</span><span aria-current="page">Zwischen Immobilien, Enteignung und Bitcoin</span></nav>
         <h1 class="v5-title v5-title--sm">Zwischen Immobilien, Enteignung und Bitcoin</h1>
         <p class="v5-byline v5-byline--big v5-byline--calm">Leon Wankum</p>
         <p class="v5-body">German-language interview on seizure risk and why property is easier to expropriate than bitcoin.</p>
@@ -56,16 +67,16 @@
                     </div>
         </div>
         <dl class="v5-facts">
-            <div><dt>Format</dt><dd>Video</dd></div>
-            <div><dt>Publisher</dt><dd>YouTube</dd></div>
-            <div><dt>Position in the book</dt><dd>No. 3 of 40, in the order of the original document</dd></div>
+            <div><dt data-v5="v5Format">Format</dt><dd><span data-v5="v5FmtVideo">Video</span></dd></div>
+            <div><dt data-v5="v5Publisher">Publisher</dt><dd>YouTube</dd></div>
+            <div><dt data-v5="v5Position">Position in the book</dt><dd><span data-v5="v5NoOf">No.</span> 3 <span data-v5="v5Of">of</span> 40<span data-v5="v5DocOrder">, in the order of the original document</span></dd></div>
         </dl>
-        <h2 class="v5-h2 v5-sec">Appears in</h2>
-        <p class="v5-chips"><a class="v5-chip v5-ang" href="../../../appendix5/chapters/real-estate-primary-store-of-value/">Chapter 2: Why Real Estate Became the World's Primary Store of Value</a></p>
-        <h2 class="v5-h2 v5-sec">Topics</h2>
+        <h2 class="v5-h2 v5-sec" data-v5="v5AppearsIn">Appears in</h2>
+        <p class="v5-chips"><a class="v5-chip v5-ang" href="../../../appendix5/chapters/real-estate-primary-store-of-value/"><span data-v5="v5Chapter">Chapter</span> 2: Why Real Estate Became the World's Primary Store of Value</a></p>
+        <h2 class="v5-h2 v5-sec" data-v5="v5Topics">Topics</h2>
         <p class="v5-chips"><a class="v5-chip v5-ang" href="../../../appendix5/topics/real-estate-housing/">Real Estate &amp; Housing</a> <a class="v5-chip v5-ang" href="../../../appendix5/topics/custody-verification/">Custody &amp; Verification</a></p>
-        <nav class="v5-nexttile" aria-label="Next source"><a href="../../../appendix5/sources/bitcoin-mstr-destroys-property/"><span class="v5-nexttile-k">Next &#8250;</span><span class="v5-nexttile-t">Why Bitcoin &amp; MSTR Destroys the $300T Property Market</span><span class="v5-nexttile-m">Leon Wankum &middot; YouTube</span></a></nav>
-        <p class="v5-back"><a href="../../../appendix5/">Back to Extended Appendix</a></p>
+        <nav class="v5-nexttile" aria-label="Next source"><a href="../../../appendix5/sources/bitcoin-mstr-destroys-property/"><span class="v5-nexttile-k"><span data-v5="v5Next">Next</span> &#8250;</span><span class="v5-nexttile-t">Why Bitcoin &amp; MSTR Destroys the $300T Property Market</span><span class="v5-nexttile-m">Leon Wankum &middot; YouTube</span></a></nav>
+        <p class="v5-back"><a href="../../../appendix5/" data-v5="v5BackToAppendix">Back to Extended Appendix</a></p>
     </main>
 
     <footer class="site-footer">
@@ -73,31 +84,31 @@
         <p>Copyright © <span data-year>2026</span> <a href="https://leonwankum.com" target="_blank" rel="noopener">Leon Wankum</a> · <span data-i18n="websiteBy">Website by</span> <a href="https://ceyhunguney.com" target="_blank" rel="noopener">Ceyhun Güney</a> <span data-i18n="websiteAnd">and</span> <a href="https://rankplan.us" target="_blank" rel="noopener">Rankplan</a></p>
     </footer>
     <button type="button" class="v5-pill" id="v5-pill" aria-haspopup="dialog">
-        <span class="v5-pill-label"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f7931a" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg><span class="txt">SEARCH &amp; CONTENTS</span></span>
+        <span class="v5-pill-label"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f7931a" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg><span class="txt" data-v5="v5SearchContents">SEARCH &amp; CONTENTS</span></span>
         <span class="v5-pill-btn"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#111111" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
     </button>
     <div class="v5-overlay" id="v5-overlay" hidden role="dialog" aria-modal="true" aria-label="Search and contents">
         <div class="v5-overlay-in">
             <div class="v5-ov-closewrap"><button type="button" class="v5-overlay-close" id="v5-ov-close" aria-label="Close search and contents">&times;</button></div>
-            <p class="v5-ov-label">Search the appendix</p>
-            <div class="v5-ov-search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f7931a" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg><input type="search" id="v5-ov-q" placeholder="Titles, authors, chapters, topics, URLs" aria-label="Search the appendix"><button type="button" class="v5-ov-go" id="v5-ov-go" aria-label="Go to first result"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15"/><path d="M13 5l7 7-7 7"/></svg></button></div>
+            <p class="v5-ov-label" data-v5="v5SearchAppendix">Search the appendix</p>
+            <div class="v5-ov-search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f7931a" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg><input type="search" id="v5-ov-q" placeholder="Titles, authors, chapters, topics, URLs" data-v5ph="v5OvPlaceholder" aria-label="Search the appendix"><button type="button" class="v5-ov-go" id="v5-ov-go" aria-label="Go to first result"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15"/><path d="M13 5l7 7-7 7"/></svg></button></div>
             <div class="v5-ov-tabs" role="tablist" aria-label="Filter results">
-                <button type="button" class="v5-ov-tab" data-ovtab="all" aria-selected="true">All <span class="cnt">(76)</span></button>
-                <button type="button" class="v5-ov-tab" data-ovtab="sources" aria-selected="false">Sources <span class="cnt">(40)</span></button>
-                <button type="button" class="v5-ov-tab" data-ovtab="commentary" aria-selected="false">Commentary <span class="cnt">(16)</span></button>
-                <button type="button" class="v5-ov-tab" data-ovtab="chapters" aria-selected="false">Chapters <span class="cnt">(20)</span></button>
+                <button type="button" class="v5-ov-tab" data-ovtab="all" aria-selected="true"><span data-v5="v5All">All</span> <span class="cnt">(76)</span></button>
+                <button type="button" class="v5-ov-tab" data-ovtab="sources" aria-selected="false"><span data-v5="v5Sources">Sources</span> <span class="cnt">(40)</span></button>
+                <button type="button" class="v5-ov-tab" data-ovtab="commentary" aria-selected="false"><span data-v5="v5Commentary">Commentary</span> <span class="cnt">(16)</span></button>
+                <button type="button" class="v5-ov-tab" data-ovtab="chapters" aria-selected="false"><span data-v5="v5Chapters">Chapters</span> <span class="cnt">(20)</span></button>
             </div>
             <div class="v5-ov-results" id="v5-ov-results"></div>
             <div class="v5-ov-tiles">
-                <button type="button" class="v5-ov-tile" data-ovtile="all">All sources</button>
-                <button type="button" class="v5-ov-tile" data-ovtile="featured">Featured</button>
-                <button type="button" class="v5-ov-tile" data-ovtile="topics">Topics</button>
-                <button type="button" class="v5-ov-tile" data-ovtile="commentary">Commentary</button>
+                <button type="button" class="v5-ov-tile" data-ovtile="all" data-v5="v5AllSources">All sources</button>
+                <button type="button" class="v5-ov-tile" data-ovtile="featured" data-v5="v5Featured">Featured</button>
+                <button type="button" class="v5-ov-tile" data-ovtile="topics" data-v5="v5Topics">Topics</button>
+                <button type="button" class="v5-ov-tile" data-ovtile="commentary" data-v5="v5Commentary">Commentary</button>
             </div>
             <div class="v5-ov-contents">
-                <p class="v5-ov-label">Contents</p>
+                <p class="v5-ov-label" data-v5="v5Contents">Contents</p>
                 <div class="v5-ov-part">
-                    <p class="v5-ov-part-k">Part 1</p>
+                    <p class="v5-ov-part-k"><span data-v5="v5Part">Part</span> 1</p>
                     <h3 class="v5-ov-part-t">Bitcoin and the Monetary Role of Real Estate</h3>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/internet-of-value/"><span class="n">1</span><span class="t">The Internet of Value</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/real-estate-primary-store-of-value/"><span class="n">2</span><span class="t">Why Real Estate Became the World's Primary Store of Value</span></a>
@@ -106,20 +117,20 @@
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/advantages-of-real-estate/"><span class="n">5</span><span class="t">The Advantages of Real Estate</span></a>
                 </div>
                 <div class="v5-ov-part">
-                    <p class="v5-ov-part-k">Part 2</p>
+                    <p class="v5-ov-part-k"><span data-v5="v5Part">Part</span> 2</p>
                     <h3 class="v5-ov-part-t">Integrating Bitcoin into Real Estate Operations</h3>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/structuring-strategic-asset/"><span class="n">6</span><span class="t">Structuring for Bitcoin as a Strategic Asset</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/mining-energy-infrastructure/"><span class="n">7</span><span class="t">Bitcoin Mining as Real Estate Energy Infrastructure</span></a>
                 </div>
                 <div class="v5-ov-part">
-                    <p class="v5-ov-part-k">Part 3</p>
+                    <p class="v5-ov-part-k"><span data-v5="v5Part">Part</span> 3</p>
                     <h3 class="v5-ov-part-t">Capital Structure and Real Estate Finance</h3>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/refinancing-leverage/"><span class="n">8</span><span class="t">Real Estate Refinancing: Using Leverage for Bitcoin Accumulation</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/bitcoin-as-collateral/"><span class="n">9</span><span class="t">Bitcoin as Collateral</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/development-finance/"><span class="n">10</span><span class="t">Bitcoin in Development Finance</span></a>
                 </div>
                 <div class="v5-ov-part">
-                    <p class="v5-ov-part-k">Part 4</p>
+                    <p class="v5-ov-part-k"><span data-v5="v5Part">Part</span> 4</p>
                     <h3 class="v5-ov-part-t">Corporate Bitcoin Treasury Strategies</h3>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/speculative-attack/"><span class="n">11</span><span class="t">The Speculative Attack: The Case for Leveraged Bitcoin Exposure</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/strategy-playbook/"><span class="n">12</span><span class="t">The Strategy Playbook</span></a>
@@ -127,7 +138,7 @@
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/corporate-bitcoin-adoption/"><span class="n">14</span><span class="t">Corporate Bitcoin Adoption</span></a>
                 </div>
                 <div class="v5-ov-part">
-                    <p class="v5-ov-part-k">Part 5</p>
+                    <p class="v5-ov-part-k"><span data-v5="v5Part">Part</span> 5</p>
                     <h3 class="v5-ov-part-t">Monetary Transformation and the Future of Real Estate</h3>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/monetary-standards-incentives/"><span class="n">15</span><span class="t">Monetary Standards and the Incentive Structure of Money</span></a>
                     <a class="v5-ov-ch" href="../../../appendix5/chapters/asset-repricing-monetary-housing/"><span class="n">16</span><span class="t">Asset Repricing and the Monetary Role of Housing</span></a>
@@ -174,12 +185,13 @@
     var v = q.value.trim().toLowerCase();
     var hits = DATA.filter(function (it) { return inTab(it) && (!v || it.hay.indexOf(v) !== -1); });
     hits = hits.slice(0, v ? 12 : 80);
-    if (!hits.length) { res.innerHTML = '<p class="v5-ov-none">No matches in the appendix.</p>'; return; }
+    if (!hits.length) { res.innerHTML = '<p class="v5-ov-none">' + window.v5t('v5NoMatches') + '</p>'; return; }
     res.innerHTML = hits.map(function (it) {
       return '<a href="' + hrefFor(it) + '"><span>' + escH(it.t) + '</span><span class="kind" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8a8a8a" stroke-width="2.5" stroke-linecap="square"><path d="M4 12h15"/><path d="M13 5l7 7-7 7"/></svg></span></a>';
     }).join('');
   }
   q.addEventListener('input', render);
+  window.addEventListener('languageChanged', render);
   document.querySelectorAll('[data-ovtab]').forEach(function (b) {
     b.addEventListener('click', function () { state.tab = b.getAttribute('data-ovtab'); state.feat = false; state.topics = false; markTabs(); render(); });
   });
