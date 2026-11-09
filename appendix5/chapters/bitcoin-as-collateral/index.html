@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chapter 9 of Digital Real Estate: Bitcoin as Collateral, with its sources.">
+    <meta name="description" content="Chapter 9 of Digital Real Estate: Bitcoin as Collateral, in the original wording of the book's appendix, with its sources.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chapter 9: Bitcoin as Collateral | Leon Wankum">
     <title>Chapter 9: Bitcoin as Collateral | Leon Wankum</title>
@@ -46,10 +46,77 @@
 
         <p class="v5-kicker">Part 3 &middot; Capital Structure and Real Estate Finance &middot; Chapter 9</p>
         <h1 class="v5-title">Bitcoin as Collateral</h1>
-        <p class="v5-body">Lenders are beginning to accept bitcoin alongside or instead of property. Custody and verification decide who can lend.</p>
-        <h2 class="v5-h2 v5-sec">Pledging a bearer asset</h2>
-        <p class="v5-body">Collateralized lending against bitcoin depends on verifiable custody, multisig arrangements and clear liquidation rules.</p>
-        <h2 class="v5-h2 v5-sec">Sources in this chapter</h2>
+        <h2 class="v5-h2 v5-sec">The Self-Paying Mortgage Concept</h2>
+        <p class="v5-body">Mortgages secured by both property and bitcoin allow borrowers to protect their home equity while potentially growing it far beyond what traditional lending structures permit.</p>
+        <p class="v5-body">By extending the loan beyond the cost of the property and allocating additional capital to bitcoin, borrowers can use bitcoin’s long-term appreciation to offset interest and principal. As bitcoin gains purchasing power relative to fiat liabilities, it reduces the real debt burden and transforms part of the loan into an appreciating position.</p>
+        <p class="v5-body">Mortgage structures that combine bitcoin with real estate introduce a dual-collateral framework with distinct risk, refinancing, and balance-sheet dynamics compared to traditional mortgages.</p>
+        <p class="v5-body">Loan-to-value and collateral structure</p>
+        <p class="v5-body">Self-paying mortgage structures typically involve higher initial loan-to-value ratios or additional collateral, as part of the borrowed capital is allocated to bitcoin rather than directly to the property. This introduces a dual-collateral framework in which both real estate and bitcoin support the loan.</p>
+        <p class="v5-body">Asymmetry between borrower upside and downside</p>
+        <p class="v5-body">If bitcoin appreciates relative to fiat liabilities, the borrower benefits from both property ownership and monetary appreciation. If bitcoin declines, the borrower remains exposed to the full nominal debt, increasing short-term risk. The structure therefore introduces asymmetric outcomes dependent on bitcoin’s price trajectory.</p>
+        <p class="v5-body">Refinancing dynamics</p>
+        <p class="v5-body">As bitcoin appreciates, borrowers may refinance based on improved balance-sheet strength, reducing effective leverage or extracting additional liquidity. This introduces a dynamic refinancing path not available in traditional mortgage structures.</p>
+        <p class="v5-body">Volatility and timing risk</p>
+        <p class="v5-body">Bitcoin’s short-term volatility introduces timing risk. Adverse price movements early in the loan period can increase effective leverage and constrain refinancing options. The structure therefore depends on sufficient time horizon, conservative sizing, and the borrower’s ability to withstand interim volatility.</p>
+        <p class="v5-body">Secure Bitcoin-Backed Lending: Custody, Multisig, and Verification</p>
+        <p class="v5-body">Counterparty Risk and Collateral Asymmetry</p>
+        <p class="v5-body">Overcollateralization introduces an asymmetry: while it protects the lender, it exposes the borrower to counterparty risk if the lender mismanages funds, rehypothecates collateral, or becomes insolvent.</p>
+        <p class="v5-body">To mitigate these risks, borrowers should prioritize lending structures that minimize third-party exposure and, where possible, allow them to retain control over their private keys or participate in shared custody arrangements. If custody is delegated to a third party, it is critical that the collateral remains segregated and is not included in the lender’s bankruptcy estate.</p>
+        <p class="v5-body">Multisignature Custody as a Structural Safeguard</p>
+        <p class="v5-body">Multisignature (multisig) custody structures provide a key structural safeguard. In a common 2-of-3 configuration, three separate private keys are created, and any two are required to authorize a transaction. Typically, one key is held by the borrower, one by the lender, and the third by a neutral third party or escrow provider.</p>
+        <p class="v5-body">This structure ensures that no single participant can unilaterally access or move the collateral. It reduces the risk of unilateral seizure, protects borrowers from lender insolvency, and provides lenders with enforceable control in the event of borrower default.</p>
+        <p class="v5-body">Verification Through Public Infrastructure</p>
+        <p class="v5-body">Collateral can be independently verified at all times through public blockchain infrastructure. Using publicly available blockchain explorers, both borrowers and lenders can confirm that collateral is held at a specified address and monitor it in real time.</p>
+        <p class="v5-body">This eliminates reliance on internal reporting or opaque balance-sheet disclosures and introduces a verifiable layer of trust that is not dependent on institutional credibility.</p>
+        <p class="v5-body">From Custodial Risk to Programmatic Security</p>
+        <p class="v5-body">Bitcoin’s programmability enables lending structures that reduce reliance on human discretion and institutional trust. Rather than depending solely on legal agreements, collateral control and verification can be embedded directly into cryptographic systems.</p>
+        <p class="v5-body">This enables the emergence of noncustodial lending models, programmable collateral arrangements, and automated enforcement mechanisms that operate independently of centralized intermediaries.1</p>
+        <p class="v5-body">Economic Alignment and Risk Distribution</p>
+        <p class="v5-body">Multisignature structures align incentives between borrowers and lenders. Borrowers retain partial control and visibility over their collateral, while lenders benefit from strong, liquid collateral that can be accessed in default scenarios without relying on lengthy legal processes.</p>
+        <p class="v5-body">Because bitcoin is a scarce and historically appreciating asset, lenders are further protected by its long-term purchasing power, while borrowers retain exposure to upside as long as they maintain their position.</p>
+        <p class="v5-body">Operational Advantages of Bitcoin Collateral</p>
+        <p class="v5-body">Unlike physical collateral such as real estate, bitcoin requires no maintenance, inspection, or ongoing operational costs. It can be stored securely in cold storage, transferred instantly, and verified globally without intermediaries.</p>
+        <p class="v5-body">These properties reduce friction, lower operational overhead, and enable the creation of scalable lending systems that are not constrained by geography or physical infrastructure.</p>
+        <p class="v5-body">System-Level Implication</p>
+        <p class="v5-body">Bitcoin-backed lending demonstrates how financial infrastructure can shift from trust-based systems toward verification-based systems. By combining overcollateralization, multisignature custody, and transparent verification, lending relationships become more resilient, auditable, and less dependent on centralized trust.</p>
+        <p class="v5-body">Proof of Reserves and Rehypothecation Risk</p>
+        <p class="v5-body">Transparency as a Structural Shift in Financial Systems</p>
+        <p class="v5-body">Bitcoin’s public ledger enables a level of transparency fundamentally different from traditional financial systems. Transactions and addresses can be independently verified, allowing users to confirm the existence and movement of assets without relying on internal reporting or third-party assurances.</p>
+        <p class="v5-body">Proof of Reserves: Verifiability of Holdings</p>
+        <p class="v5-body">This transparency makes it possible for institutions to provide proof of reserves. By disclosing wallet addresses or using cryptographic proofs, custodians and financial service providers can demonstrate that they hold sufficient assets to match client balances.</p>
+        <p class="v5-body">In contrast to traditional systems—where users must rely on balance-sheet disclosures, audits, or regulatory oversight—bitcoin allows for direct and continuous verification of holdings.</p>
+        <p class="v5-body">Rehypothecation Risk in Traditional Finance</p>
+        <p class="v5-body">Rehypothecation refers to the reuse of client collateral for additional lending or investment activities. While this can increase capital efficiency, it introduces systemic risk by creating multiple claims on the same underlying assets.</p>
+        <p class="v5-body">Historically, excessive rehypothecation has contributed to financial instability, liquidity mismatches, and, in some cases, loss of client funds.</p>
+        <p class="v5-body">How Bitcoin Reduces—but Does Not Eliminate—Risk</p>
+        <p class="v5-body">Proof of reserves can reduce rehypothecation risk by making it more difficult to obscure the true state of asset holdings. Transparent verification limits the ability of institutions to overextend against client collateral without detection.</p>
+        <p class="v5-body">However, important limitations remain:</p>
+        <p class="v5-body">•   Proof of reserves does not necessarily reveal liabilities</p>
+        <p class="v5-body">•   Off-chain obligations may still exist</p>
+        <p class="v5-body">•   Selective disclosure or misrepresentation remains possible</p>
+        <p class="v5-body">As a result, transparency improves accountability but does not fully eliminate risk.</p>
+        <p class="v5-body">Toward a Verification-Based Financial System</p>
+        <p class="v5-body">Bitcoin introduces a shift from trust-based to verification-based financial infrastructure. Instead of relying solely on institutional credibility, users can independently verify key aspects of system integrity.</p>
+        <p class="v5-body">This does not remove the need for governance or prudent risk management, but it changes the foundation on which trust is established—moving it toward verifiable data and away from opaque institutional claims.</p>
+        <p class="v5-body">Collateral Without Full Financial Disclosure</p>
+        <p class="v5-body">From Identity-Based Credit to Collateral-Based Verification</p>
+        <p class="v5-body">Traditional lending systems rely on identity, income verification, and extensive financial disclosure. Borrowers are typically required to provide detailed documentation—bank statements, employment records, tax filings, and credit histories—creating large repositories of sensitive personal data.</p>
+        <p class="v5-body">Bitcoin-backed lending introduces an alternative model in which creditworthiness can be assessed through collateral verification rather than identity disclosure. By demonstrating control over bitcoin via cryptographic keys, borrowers can prove ownership and solvency without revealing the full scope of their financial situation.</p>
+        <p class="v5-body">Proof Without Disclosure</p>
+        <p class="v5-body">This model allows for forms of selective verification:</p>
+        <p class="v5-body">•   Proof of asset ownership without revealing full balances</p>
+        <p class="v5-body">•   Proof of collateral control without disclosing identity-linked financial history</p>
+        <p class="v5-body">•   Verification of solvency without reliance on traditional credit scoring</p>
+        <p class="v5-body">Rather than exposing all financial data, borrowers reveal only what is necessary to secure the loan.</p>
+        <p class="v5-body">Privacy and Security Advantages</p>
+        <p class="v5-body">Reducing reliance on centralized data collection lowers exposure to data breaches, identity theft, and misuse of personal information. In traditional systems, sensitive financial data is often stored across multiple intermediaries, increasing the attack surface for cyber threats.</p>
+        <p class="v5-body">Bitcoin-based verification minimizes this exposure by shifting trust from data storage to cryptographic proof. Instead of trusting institutions to safeguard information, the system reduces the amount of information that must be shared in the first place.</p>
+        <p class="v5-body">Separation of Collateral and Identity</p>
+        <p class="v5-body">A key structural shift is the separation between collateral verification and borrower identity. While regulatory frameworks may still require some level of identity verification, the core lending relationship can increasingly be anchored in verifiable collateral rather than comprehensive personal disclosure.</p>
+        <p class="v5-body">This distinction allows for more flexible and privacy-preserving lending arrangements, particularly in cross-border contexts where traditional credit systems are fragmented or inaccessible.</p>
+        <p class="v5-body">System-Level Implication</p>
+        <p class="v5-body">Bitcoin-backed lending demonstrates how financial systems can evolve from identity-heavy verification toward collateral-based verification. By reducing dependence on centralized data and enabling selective disclosure, it introduces a model that is more privacy-preserving and more resilient to data-related risk.</p>
+        <h2 class="v5-h2 v5-sec">Also in this chapter</h2>
         <div class="v5-stack">
                     <article class="v5-card">
                         <p class="v5-meta">No. 4 &middot; Podcast &middot; We Study Billionaires</p>

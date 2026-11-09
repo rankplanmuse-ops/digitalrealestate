@@ -51,6 +51,9 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-back { margin-top: 2.6rem; }
 .v5-back a { color: var(--orange); font-weight: 600; }
 .v5-empty { color: var(--v5-grey); font-size: 1.05rem; padding: 1.4rem 0; }
+.v5-xlink { color: var(--orange); font-size: .98rem; font-weight: 600; margin: 1.4rem 0 .4rem; }
+.v5-srcline { color: var(--v5-grey); font-size: .95rem; line-height: 1.55; margin: 1.6rem 0 .5rem; max-width: 46rem; }
+.v5-srcline + .v5-card { margin-top: 0; }
 .v5-group { font-size: 1.15rem; font-weight: 800; color: #fff; margin: 2rem 0 1rem; }
 
 /* --- Angled controls -------------------------------------------------- */
