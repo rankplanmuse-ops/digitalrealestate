@@ -120,9 +120,10 @@ body.v5 .nav { flex-wrap: nowrap; }
 
 /* --- All Sources menu: Appendix II shape, larger boxes ---------------- */
 .v5-menu {
-  position: sticky; top: 0; z-index: 30;
+  position: sticky; top: 1rem; z-index: 30;
   background: var(--bg); border-block: 1px solid var(--v5-line);
   padding: 1rem 0 1.1rem; margin-bottom: 1.6rem;
+  box-shadow: 0 -1.25rem 0 var(--bg);
 }
 .v5-tabs { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .6rem; }
 .v5-tab {
@@ -246,9 +247,9 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-tag:hover { box-shadow: inset 0 0 0 1px var(--orange); color: var(--orange); }
 .v5-tag .cnt { color: var(--v5-grey); font-size: .85rem; margin-left: .45rem; }
 .v5-crumbs { font-size: .9rem; color: #6f6f6f; margin: 0 0 2rem; }
-.v5-crumbs a { color: #9a9a9a; text-decoration: none; }
-.v5-crumbs a:hover { color: var(--orange); }
-.v5-crumbs .sep { margin: 0 .5rem; color: #555; }
+.v5-crumbs a { color: #6f6f6f; text-decoration: none; }
+.v5-crumbs a:hover { color: #6f6f6f; }
+.v5-crumbs .sep { margin: 0 .5rem; color: #6f6f6f; }
 .v5-crumbs [aria-current] { color: #6f6f6f; }
 
 /* Chapter sub nav (Appendix II pattern) */
@@ -323,6 +324,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-num:hover { border-color: var(--orange); color: var(--orange); }
 .v5-num[aria-current="true"] { border-color: var(--orange); color: var(--orange); }
 .v5-numidx {
+  width: 200px; justify-content: center;
   height: 52px; padding: 0 1.05rem; display: inline-flex; align-items: center; gap: .5rem;
   background: transparent; color: #fff; border: 1px solid #343434; cursor: pointer;
   font: inherit; font-weight: 600; font-size: .92rem; letter-spacing: .06em; text-transform: uppercase;
@@ -390,5 +392,5 @@ body.v5 .nav { flex-wrap: nowrap; }
 @media (max-width: 640px) {
   .v5-nums { display: grid; grid-template-columns: repeat(7, 1fr); gap: .45rem; }
   .v5-nums .v5-num { width: auto; height: 44px; font-size: 1rem; }
-  .v5-nums .v5-numidx { grid-column: 1 / -1; height: 44px; justify-content: center; }
+  .v5-nums .v5-numidx { grid-column: span 4; width: auto; height: 44px; justify-content: center; }
 }
