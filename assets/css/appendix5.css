@@ -11,7 +11,7 @@ body.v5 { --v5-line: #262626; --v5-panel: #151515; --v5-grey: #8a8a8a; }
 body.v5 .site-header {
   position: static;
   background: var(--bg);
-  border-bottom: 2px solid var(--orange);
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,12 +59,15 @@ body.v5 .nav { flex-wrap: nowrap; }
 /* --- Angled controls -------------------------------------------------- */
 .v5-ang { clip-path: none; border-radius: 0; } /* fully rectangular (user, 2026-11-09) */
 .v5-btn {
-  display: inline-block; background: var(--orange); color: #111;
-  font-weight: 800; font-size: .95rem; letter-spacing: .04em; text-transform: uppercase;
-  padding: 1rem 1.7rem; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; color: var(--orange);
+  box-shadow: inset 0 0 0 1.5px var(--orange);
+  font-weight: 800; font-size: .86rem; letter-spacing: .04em; text-transform: uppercase;
+  padding: .68rem 1.15rem; min-height: 42px; text-decoration: none;
+  border: 0; cursor: pointer; font-family: inherit;
 }
-.v5-btn--ghost { background: #151515; color: var(--orange); box-shadow: inset 0 0 0 1px var(--orange); }
-.v5-btn:hover { filter: brightness(1.08); }
+.v5-btn--ghost { background: transparent; }
+.v5-btn:hover { background: var(--orange); color: #111; }
 .v5-chip {
   display: inline-block; background: #1a1a1a; color: #e9e9e9;
   padding: .65rem 1.05rem; margin: 0 .45rem .6rem 0; font-size: .92rem; font-weight: 600; text-decoration: none;
@@ -179,7 +182,7 @@ body.v5 .nav { flex-wrap: nowrap; }
   .v5-track .v5-card { flex-basis: calc((100% - 32px) / 3); }
 }
 @media (max-width: 821px) {
-  body.v5 .site-header { flex-wrap: wrap; padding: 1.1rem 1.25rem .9rem; row-gap: .6rem; border-bottom-width: 2px; }
+  body.v5 .site-header { flex-wrap: wrap; padding: 1.1rem 1.25rem .9rem; row-gap: .6rem; }
   body.v5 .logo { width: 6.5rem; order: 1; }
   /* Original mobile header: logo and Buy button share the first row,
      the nav sits centered on its own row below (user, 2026-11-09). */
@@ -226,3 +229,77 @@ body.v5 .nav { flex-wrap: nowrap; }
   .v5-embed { max-width: 40rem; }
   .v5-embed .v5-facade { max-width: none; }
 }
+
+/* --- Batch 2026-11-09 evening: featured cards, tags, crumbs, chapbar,
+       contents modal, floating search widget ------------------------- */
+.v5-card--link { display: block; text-decoration: none; color: #e9e9e9; }
+.v5-card--link .v5-byline { color: var(--v5-grey); }
+.v5-card--link .v5-card-title { color: #fff; }
+.v5-tags { display: flex; flex-wrap: wrap; gap: .6rem; }
+.v5-tag {
+  display: inline-block; background: #1a1a1a; color: #fff; text-decoration: none;
+  padding: .8rem 1.3rem; font-size: 1rem; font-weight: 600;
+  box-shadow: inset 0 0 0 1px #2c2c2c;
+}
+.v5-tag:hover { box-shadow: inset 0 0 0 1px var(--orange); color: var(--orange); }
+.v5-tag .cnt { color: var(--v5-grey); font-size: .85rem; margin-left: .45rem; }
+.v5-crumbs { font-size: .9rem; color: var(--v5-grey); margin: 0 0 1.1rem; }
+.v5-crumbs a { color: #cfcfcf; text-decoration: none; }
+.v5-crumbs a:hover { color: var(--orange); }
+.v5-crumbs .sep { margin: 0 .5rem; color: #555; }
+.v5-crumbs [aria-current] { color: var(--v5-grey); }
+
+/* Chapter sub nav (Appendix II pattern) */
+.chapbar5 { position: sticky; top: 0; z-index: 40; background: var(--bg); border-block: 1px solid var(--v5-line); margin: 0 0 2rem; }
+.chapbar5-tabs { display: flex; flex-wrap: wrap; gap: .55rem; padding: .8rem 0; }
+.chapbar5 .v5-tab { min-height: 50px; padding: .7rem 1.25rem; font-size: .95rem; }
+.chapbar5-panel { border-top: 1px solid var(--v5-line); padding: 1.1rem 0 1.3rem; }
+.chapbar5-panel[hidden] { display: none; }
+.chapbar5-rows { max-height: 320px; overflow: auto; display: grid; gap: .35rem; }
+.chapbar5-rows a { color: #e9e9e9; text-decoration: none; padding: .45rem .2rem; display: flex; justify-content: space-between; gap: 1rem; }
+.chapbar5-rows a:hover { color: var(--orange); }
+.chapbar5-rows .cnt { color: var(--v5-grey); font-size: .88rem; }
+
+/* Contents modal (Appendix IV box style) */
+.v5-modal { position: fixed; inset: 0; z-index: 90; background: rgba(8,8,8,.82); display: flex; align-items: flex-start; justify-content: center; padding: 4.5rem 1rem 2rem; overflow: auto; }
+.v5-modal[hidden] { display: none; }
+.v5-modal-box { background: #151515; border: 1px solid var(--orange); max-width: 47.5rem; width: 100%; padding: 1.8rem 2rem 2rem; }
+.v5-modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: .6rem; }
+.v5-modal-title { font-family: var(--font); text-transform: uppercase; font-size: 1.5rem; color: #fff; margin: 0; }
+.v5-modal-close { background: var(--orange); color: #111; border: 0; width: 44px; height: 44px; font-size: 1.25rem; font-weight: 800; cursor: pointer; }
+.v5-modal .v5-part { margin-top: 1.3rem; }
+.v5-modal-ch { display: flex; justify-content: space-between; gap: 1rem; color: #e9e9e9; text-decoration: none; padding: .5rem .1rem; border-bottom: 1px solid #222; }
+.v5-modal-ch:hover { color: var(--orange); }
+.v5-modal-ch[aria-current] { color: var(--orange); }
+.v5-modal-ch .cnt { color: var(--v5-grey); font-size: .88rem; white-space: nowrap; }
+
+/* Floating search & contents widget (Lovable pattern) */
+.v5-pill {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 80;
+  display: flex; align-items: center; gap: .8rem;
+  background: #1b1b1b; border: 1px solid #3a3a3a; color: #fff;
+  padding: .5rem .5rem .5rem 1.15rem; cursor: pointer; font-family: 'Inter', sans-serif;
+  box-shadow: 0 10px 34px rgba(0,0,0,.55);
+}
+.v5-pill-label { font-size: .86rem; font-weight: 800; letter-spacing: .16em; display: flex; align-items: center; gap: .6rem; }
+.v5-pill-btn { background: var(--orange); color: #111; width: 46px; height: 46px; display: grid; place-items: center; }
+.v5-overlay { position: fixed; inset: 0; z-index: 95; background: rgba(9,9,9,.98); overflow: auto; }
+.v5-overlay[hidden] { display: none; }
+.v5-overlay-in { max-width: 56rem; margin: 0 auto; padding: 3.2rem 1.25rem 4rem; font-family: 'Inter', sans-serif; }
+.v5-overlay-close { position: fixed; top: 1rem; right: 1rem; background: var(--orange); color: #111; border: 0; width: 48px; height: 48px; font-size: 1.35rem; font-weight: 800; cursor: pointer; z-index: 96; }
+.v5-ov-label { font-size: .8rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--v5-grey); margin: 0 0 .9rem; }
+.v5-ov-search { display: flex; align-items: center; gap: .7rem; background: #141414; box-shadow: inset 0 0 0 1px #333; padding: 0 .5rem 0 1.1rem; height: 62px; }
+.v5-ov-search:focus-within { box-shadow: inset 0 0 0 2px var(--orange); }
+.v5-ov-search input { flex: 1; background: none; border: 0; outline: 0; color: #fff; font: inherit; font-size: 1.05rem; min-width: 0; }
+.v5-ov-go { background: var(--orange); color: #111; border: 0; width: 46px; height: 46px; font-size: 1.2rem; font-weight: 800; cursor: pointer; flex: none; }
+.v5-ov-results { margin: 1rem 0 0; display: grid; gap: .4rem; }
+.v5-ov-results a { display: flex; justify-content: space-between; gap: 1rem; background: #151515; border: 1px solid var(--v5-line); color: #e9e9e9; text-decoration: none; padding: .8rem 1rem; }
+.v5-ov-results a:hover { border-color: var(--orange); }
+.v5-ov-results .kind { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.v5-ov-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-top: 2.2rem; }
+.v5-ov-tile { background: #121212; border: 1px solid var(--v5-line); color: #fff; text-decoration: none; padding: 1.5rem 1.3rem; font-weight: 800; letter-spacing: .08em; font-size: .95rem; display: flex; align-items: center; gap: .8rem; }
+.v5-ov-tile:hover { border-color: var(--orange); color: var(--orange); }
+.v5-ov-contents { margin-top: 2.4rem; }
+.v5-ov-contents .v5-modal-ch { border-bottom-color: #1e1e1e; }
+@media (max-width: 640px) { .v5-ov-tiles { grid-template-columns: 1fr 1fr; } .v5-pill-label .txt { display: none; } }
