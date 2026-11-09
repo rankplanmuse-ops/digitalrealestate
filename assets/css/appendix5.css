@@ -127,16 +127,17 @@ body.v5 .nav { flex-wrap: nowrap; }
 }
 .v5-tabs { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .6rem; }
 .v5-tab {
-  min-height: 44px; padding: .55rem .95rem; font-size: .88rem; font-weight: 800;
+  min-height: 44px; padding: .55rem .95rem; font-size: .88rem; font-weight: 700;
   letter-spacing: .03em;
   background: transparent; color: #fff; border: 0; cursor: pointer; font-family: inherit;
   box-shadow: inset 0 0 0 1px #3d3d3d;
 }
-.v5-tab[aria-pressed="true"] { background: transparent; color: var(--orange); box-shadow: inset 0 0 0 1.5px var(--orange); }
+.v5-tab[aria-pressed="true"] { background: transparent; color: var(--orange); box-shadow: inset 0 0 0 1.5px var(--orange); font-weight: 800; }
 .v5-filters { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: .8rem; }
 .v5-fbtn {
-  min-height: 44px; padding: .55rem .95rem; font-size: .88rem; font-weight: 600;
-  background: transparent; color: #e9e9e9; border: 0; cursor: pointer; font-family: inherit;
+  min-height: 44px; padding: .55rem .95rem; font-size: .88rem; font-weight: 700;
+  letter-spacing: .03em;
+  background: transparent; color: #fff; border: 0; cursor: pointer; font-family: inherit;
   box-shadow: inset 0 0 0 1px #3d3d3d;
 }
 .v5-fbtn[aria-pressed="true"] { background: transparent; color: var(--orange); box-shadow: inset 0 0 0 1.5px var(--orange); font-weight: 800; }
@@ -181,6 +182,10 @@ body.v5 .nav { flex-wrap: nowrap; }
 @media (min-width: 640px) {
   .v5-track .v5-card { flex-basis: calc((100% - 16px) / 2); }
 }
+.v5-sec-head--fold { justify-content: flex-start; gap: .8rem; }
+.v5-fold { width: 38px; height: 38px; flex: none; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--orange); border: 0; box-shadow: inset 0 0 0 1px #3d3d3d; cursor: pointer; }
+.v5-fold svg { transform: rotate(-90deg); transition: transform .18s ease; }
+.v5-fold[aria-expanded="true"] svg { transform: rotate(0deg); }
 @media (min-width: 1024px) {
   .v5-track .v5-card { flex-basis: calc((100% - 32px) / 3); }
 }
