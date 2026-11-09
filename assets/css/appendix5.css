@@ -303,3 +303,27 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-ov-contents { margin-top: 2.4rem; }
 .v5-ov-contents .v5-modal-ch { border-bottom-color: #1e1e1e; }
 @media (max-width: 640px) { .v5-ov-tiles { grid-template-columns: 1fr 1fr; } .v5-pill-label .txt { display: none; } }
+
+/* --- Batch 2026-11-09 late: accordion button colors, chapter numbers,
+       chapter index dropdown ------------------------------------------ */
+.v5-acc-actions .v5-btn { color: #f2f2f2; box-shadow: inset 0 0 0 1.5px #e6e6e6; gap: .45rem; text-decoration: none; }
+.v5-acc-actions .v5-btn:hover { background: #f2f2f2; color: #111; }
+.v5-acc-actions .v5-btn.v5-acc-details { color: var(--orange); box-shadow: inset 0 0 0 1.5px var(--orange); }
+.v5-acc-actions .v5-btn.v5-acc-details:hover { background: var(--orange); color: #111; }
+.v5-nums { display: flex; flex-wrap: wrap; gap: .55rem; }
+.v5-num {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  background: #141414; color: #fff; border: 1px solid #343434;
+  text-decoration: none; font-weight: 700; font-size: 1.05rem;
+}
+.v5-num:hover { border-color: var(--orange); color: var(--orange); }
+.v5-num[aria-current="true"] { border-color: var(--orange); color: var(--orange); }
+.v5-idx-togglewrap { margin: 1.2rem 0 0; }
+.v5-idx-box { border: 1px solid var(--orange); background: #141414; padding: 1.6rem 1.8rem 1.8rem; margin-top: 1.2rem; }
+.v5-idx-box[hidden] { display: none; }
+.v5-idx-head { font-size: .82rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin: 0 0 .4rem; }
+.v5-idx-row { display: flex; gap: 1.15rem; align-items: baseline; padding: .5rem 0; border-bottom: 1px solid #222; color: #eee; text-decoration: none; }
+.v5-idx-row .n { color: var(--orange); font-weight: 800; min-width: 1.6rem; }
+.v5-idx-row:hover .t { color: var(--orange); }
+.v5-idx-row[aria-current="true"] .t { color: var(--orange); }
+.chapbar5-panel .v5-idx-box { max-height: 400px; overflow: auto; }
