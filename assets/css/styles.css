@@ -7,6 +7,15 @@
    ========================================================================== */
 
 @font-face {
+  font-family: 'Franklin Gothic Demi Cond';
+  src: url('../fonts/FranklinGothic-DemiCond.woff2') format('woff2'),
+       url('../fonts/FranklinGothic-DemiCond.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Gothic CG No1';
   src: url('../fonts/GothicCGNo1.woff2') format('woff2'),
        url('../fonts/GothicCGNo1.woff') format('woff');
@@ -23,7 +32,7 @@
   --bg: #111111;
   --ink: #000000;
   --white: #ffffff;
-  --font: 'Gothic CG No1', 'Franklin Gothic Demi Cond', 'Helvetica Neue', Arial, sans-serif;
+  --font: 'Franklin Gothic Demi Cond', 'Gothic CG No1', 'Helvetica Neue', Arial, sans-serif;
 
   --u: min(calc(100vw / 1280), calc(100svh / 764));
 
@@ -73,13 +82,15 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
   text-transform: uppercase;
   white-space: nowrap;
-  /* Gothic CG No1 carries extra space under the baseline, so centred caps
-     sit high. Pushing the content box down by 0.18em centres the caps. */
-  padding-top: 0.18em;
+  /* Franklin Gothic Demi Cond caps sit essentially centred in the line
+     box, so no baseline compensation is needed. (The previous font,
+     Gothic CG No1, needed a 0.18em push down.) */
+  padding-top: 0;
   /* Every button uses the header button's padding around the caps, whatever
-     its font size: cap height (0.765em in Gothic CG No1) plus a fixed gap
-     above and below, a fixed pad at the sides. Sizes only set font-size. */
-  height: calc(0.765em + 2 * var(--btn-gap));
+     its font size: cap height (0.667em in Franklin Gothic Demi Cond) plus a
+     fixed gap above and below, a fixed pad at the sides. Sizes only set
+     font-size. */
+  height: calc(0.667em + 2 * var(--btn-gap));
   padding-inline: var(--btn-pad);
   transition: background-color 0.2s ease;
 }
