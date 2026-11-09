@@ -1008,6 +1008,13 @@
       });
       head.setAttribute('aria-expanded', open ? 'false' : 'true');
       panel.hidden = open;
+      if (!open) {
+        var menu = document.querySelector('.v5-menu');
+        var off = 12;
+        if (menu && getComputedStyle(menu).position === 'sticky') off = menu.offsetHeight + 28;
+        var y = head.getBoundingClientRect().top + window.pageYOffset - off;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }
       return;
     }
     var cp = e.target.closest('[data-copy]');
