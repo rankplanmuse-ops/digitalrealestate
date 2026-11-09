@@ -30,8 +30,8 @@ body.v5 .nav { flex-wrap: nowrap; }
   color: #e9e9e9;
 }
 .v5-kicker {
-  font-size: .78rem; font-weight: 800; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--v5-grey); margin: 0 0 .9rem;
+  font-size: .78rem; font-weight: 400; letter-spacing: .14em;
+  text-transform: uppercase; color: #666; margin: 0 0 .9rem;
 }
 .v5-title {
   font-family: var(--font); text-transform: uppercase;
@@ -347,7 +347,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 
 /* --- Batch 2026-11-09 night: source-page hierarchy calming, status
        line blanked (space kept) -------------------------------------- */
-.v5-kicker--quiet { color: #6e6e6e; font-weight: 600; }
+.v5-kicker--quiet { color: #666; font-weight: 400; }
 .v5-byline--calm { color: #a8a8a8; }
 .v5-facts dd { color: #d5d5d5; }
 .v5-status { visibility: hidden; }
