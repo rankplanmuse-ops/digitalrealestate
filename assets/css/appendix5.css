@@ -128,7 +128,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-tabs { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: .6rem; }
 .v5-tab {
   min-height: 44px; padding: .55rem .95rem; font-size: .88rem; font-weight: 800;
-  letter-spacing: .03em; text-transform: uppercase;
+  letter-spacing: .03em;
   background: transparent; color: #fff; border: 0; cursor: pointer; font-family: inherit;
   box-shadow: inset 0 0 0 1px #3d3d3d;
 }
@@ -327,7 +327,7 @@ body.v5 .nav { flex-wrap: nowrap; }
   width: 200px; justify-content: center;
   height: 52px; padding: 0 1.05rem; display: inline-flex; align-items: center; gap: .5rem;
   background: transparent; color: #fff; border: 1px solid #343434; cursor: pointer;
-  font: inherit; font-weight: 600; font-size: .92rem; letter-spacing: .06em; text-transform: uppercase;
+  font: inherit; font-weight: 600; font-size: .92rem; letter-spacing: .06em;
 }
 .v5-numidx:hover { border-color: var(--orange); color: var(--orange); }
 .v5-numidx[aria-expanded="true"] { border-color: var(--orange); color: var(--orange); }
@@ -368,7 +368,7 @@ body.v5 .nav { flex-wrap: nowrap; }
 .v5-ov-tabs { display: flex; flex-wrap: wrap; gap: 1.6rem; border-bottom: 1px solid #262626; margin-top: 1.1rem; }
 .v5-ov-tab {
   background: none; border: 0; color: #9a9a9a; font: inherit; cursor: pointer;
-  font-size: .92rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  font-size: .92rem; font-weight: 700; letter-spacing: .06em;
   padding: .55rem 0 .7rem; margin-bottom: -1px; box-shadow: 0 2px 0 transparent;
 }
 .v5-ov-tab .cnt { color: #6f6f6f; font-weight: 600; }
