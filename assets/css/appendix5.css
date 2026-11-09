@@ -401,3 +401,8 @@ body.v5 .nav { flex-wrap: nowrap; }
   .v5-nums .v5-num { width: auto; height: 44px; font-size: 1rem; }
   .v5-nums .v5-numidx { grid-column: span 4; width: auto; height: 44px; justify-content: center; }
 }
+
+/* Part icons (orange skyline progression, 2026-11-09) */
+.v5-particon { display: block; width: 100%; max-width: 30rem; height: auto; margin: .75rem 0 1.5rem; }
+.v5-particon--idx { max-width: 21rem; margin: 1.5rem 0 .85rem; }
+.v5-idx-head + .v5-particon--idx { margin-top: .5rem; }
