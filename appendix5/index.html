@@ -132,8 +132,8 @@
                 <a class="v5-num" href="../appendix5/chapters/built-environment-hard-money/" aria-label="Chapter 18: The Built Environment Under Hard Money">18</a>
                 <a class="v5-num" href="../appendix5/chapters/monetary-transition-underway/" aria-label="Chapter 19: A Monetary Transition Already Underway">19</a>
                 <a class="v5-num" href="../appendix5/chapters/business-models-change/" aria-label="Chapter 20: As the Monetary Foundation Changes, So Too Must the Business Models">20</a>
+                <button type="button" class="v5-numidx" id="v5-idx-toggle" aria-expanded="false" aria-controls="v5-idx-panel">Chapter index <span aria-hidden="true">&#9662;</span></button>
             </div>
-            <p class="v5-idx-togglewrap"><button type="button" class="v5-tab v5-ang" id="v5-idx-toggle" aria-expanded="false" aria-controls="v5-idx-panel">Chapter index &#9662;</button></p>
             <div class="v5-idx-box" id="v5-idx-panel" hidden>
                 <p class="v5-idx-head">Contents</p>
                 <p class="v5-part">Part 1 &middot; Bitcoin and the Monetary Role of Real Estate</p>
@@ -182,8 +182,8 @@
             <h2 class="v5-h2">All sources</h2>
             <div class="v5-menu">
                 <div class="v5-tabs" role="group" aria-label="List mode">
-                    <button type="button" class="v5-tab v5-ang" data-mode="all" aria-pressed="true">All sources</button>
-                    <button type="button" class="v5-tab v5-ang" data-mode="chapters" aria-pressed="false">Chapters</button>
+                    <button type="button" class="v5-tab v5-ang" data-mode="all" aria-pressed="false">All sources</button>
+                    <button type="button" class="v5-tab v5-ang" data-mode="chapters" aria-pressed="true">Chapters</button>
                     <button type="button" class="v5-tab v5-ang" data-mode="topics" aria-pressed="false">Topics</button>
                     <button type="button" class="v5-tab v5-ang" data-mode="featured" aria-pressed="false">Featured</button>
                 </div>
@@ -952,7 +952,7 @@
   var CHAPTERS = [{"slug":"internet-of-value","number":1,"part":1,"partTitle":"Bitcoin and the Monetary Role of Real Estate","title":"The Internet of Value"},{"slug":"real-estate-primary-store-of-value","number":2,"part":1,"partTitle":"Bitcoin and the Monetary Role of Real Estate","title":"Why Real Estate Became the World's Primary Store of Value"},{"slug":"monetary-premium","number":3,"part":1,"partTitle":"Bitcoin and the Monetary Role of Real Estate","title":"The Role of the Monetary Premium"},{"slug":"bitcoin-vs-real-estate","number":4,"part":1,"partTitle":"Bitcoin and the Monetary Role of Real Estate","title":"Bitcoin vs. Real Estate"},{"slug":"advantages-of-real-estate","number":5,"part":1,"partTitle":"Bitcoin and the Monetary Role of Real Estate","title":"The Advantages of Real Estate"},{"slug":"structuring-strategic-asset","number":6,"part":2,"partTitle":"Integrating Bitcoin into Real Estate Operations","title":"Structuring for Bitcoin as a Strategic Asset"},{"slug":"mining-energy-infrastructure","number":7,"part":2,"partTitle":"Integrating Bitcoin into Real Estate Operations","title":"Bitcoin Mining as Real Estate Energy Infrastructure"},{"slug":"refinancing-leverage","number":8,"part":3,"partTitle":"Capital Structure and Real Estate Finance","title":"Real Estate Refinancing: Using Leverage for Bitcoin Accumulation"},{"slug":"bitcoin-as-collateral","number":9,"part":3,"partTitle":"Capital Structure and Real Estate Finance","title":"Bitcoin as Collateral"},{"slug":"development-finance","number":10,"part":3,"partTitle":"Capital Structure and Real Estate Finance","title":"Bitcoin in Development Finance"},{"slug":"speculative-attack","number":11,"part":4,"partTitle":"Corporate Bitcoin Treasury Strategies","title":"The Speculative Attack: The Case for Leveraged Bitcoin Exposure"},{"slug":"strategy-playbook","number":12,"part":4,"partTitle":"Corporate Bitcoin Treasury Strategies","title":"The Strategy Playbook"},{"slug":"metaplanet-story","number":13,"part":4,"partTitle":"Corporate Bitcoin Treasury Strategies","title":"The Metaplanet Story"},{"slug":"credit-interest-capital","number":17,"part":5,"partTitle":"Monetary Transformation and the Future of Real Estate","title":"Credit, Interest Rates, and Capital Formation"},{"slug":"built-environment-hard-money","number":18,"part":5,"partTitle":"Monetary Transformation and the Future of Real Estate","title":"The Built Environment Under Hard Money"},{"slug":"business-models-change","number":20,"part":5,"partTitle":"Monetary Transformation and the Future of Real Estate","title":"As the Monetary Foundation Changes, So Too Must the Business Models"}];
   var TOPICS = [{"slug":"money-store-of-value","name":"Money & Store of Value"},{"slug":"real-estate-housing","name":"Real Estate & Housing"},{"slug":"mortgages-collateral","name":"Mortgages & Collateral"},{"slug":"custody-verification","name":"Custody & Verification"},{"slug":"mining-energy","name":"Mining & Energy"},{"slug":"corporate-treasury","name":"Corporate Treasury & Capital Markets"},{"slug":"architecture-urbanism","name":"Architecture & Urbanism"},{"slug":"technology-monetary-futures","name":"Technology & Monetary Futures"}];
   var FMT = { video: 'Video', podcast: 'Podcast', article: 'Article', research: 'Research' };
-  var mode = 'all', filter = 'all', query = '';
+  var mode = 'chapters', filter = 'all', query = '';
   var list = document.getElementById('v5-list');
   var status = document.getElementById('v5-status');
   function matches(s) {
