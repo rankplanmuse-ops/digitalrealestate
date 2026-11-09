@@ -1051,7 +1051,7 @@
     var w = track.children[0].getBoundingClientRect().width + 16;
     track.style.transform = 'translateX(' + (-idx * w) + 'px)';
     prev.disabled = idx <= 0; next.disabled = idx >= maxIdx();
-    count.textContent = 'Featured ' + (idx + 1) + ' to ' + Math.min(cards, idx + perView()) + ' of ' + cards;
+    count.textContent = (idx + 1) + '/' + cards;
   }
   prev.addEventListener('click', function () { idx = Math.max(0, idx - 1); show(); });
   next.addEventListener('click', function () { idx = Math.min(maxIdx(), idx + 1); show(); });
