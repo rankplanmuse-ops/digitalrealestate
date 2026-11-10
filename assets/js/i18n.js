@@ -115,6 +115,16 @@ class I18n {
       }
     });
 
+    // Buy links point at the edition matching the current language
+    // ("buyUrl" in the lang files). Match on either edition's ASIN so
+    // repeated language switches keep swapping cleanly.
+    const buyUrl = this.t('buyUrl');
+    if (buyUrl !== 'buyUrl') {
+      document.querySelectorAll('a[href*="B0HHSGBY6S"], a[href*="3949098674"]').forEach(a => {
+        a.href = buyUrl;
+      });
+    }
+
     // Update document title
     const siteTitle = this.t('siteTitle');
     if (siteTitle !== 'siteTitle') {
