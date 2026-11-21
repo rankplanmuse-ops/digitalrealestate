@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Digital Real Estate: merged single-page appendix (appendix/index.html)
+   Structure-only rules on top of appendix.css: part blocks, chapter blocks
+   and in-chapter section titles. Same tokens, no new colors, no new fonts.
+   Desktop font-size right-sizing for the long page lives in the media
+   query at the bottom (mobile keeps the v1 sizes untouched).
+   ========================================================================== */
+
+.m-part { margin-top: 4.5rem; }
+
+.m-chapter { margin-top: 3.5rem; }
+.m-part .m-chapter:first-of-type { margin-top: 2.5rem; }
+
+.m-chapter-title {
+  font-size: var(--fs-m);
+  line-height: var(--lh);
+  margin: 0.3em 0 0.45em;
+}
+
+.m-sec-title { margin-top: 2rem; }
+
+/* Anchor jumps land below the frame's top edge, not under it. */
+.appendix-merged [id] { scroll-margin-top: 2rem; }
+
+/* Desktop type scale for the long merged page (821px+ landscape only;
+   mobile keeps the v1 sizes untouched). Reconciled from two independent
+   reviews of the v1 desktop screenshot, Gemini and Duck AI (GPT-6 Luna),
+   2026-11-03: both said the fluid main-site scale (title 56px, lede and
+   source titles 39px, notes 27.6px at 1440x900) is poster-sized for a
+   16-chapter reference page. Applied values sit between the two scales,
+   leaning to Gemini on headings (condensed face carries larger sizes)
+   and to the shared middle on text:
+   title 48, lede 20/1.5, part heading 30, chapter title 26, section
+   heading 20, body 18/1.6, source title 18, meta 13, author 14,
+   note 15/1.55, eyebrow and contents part labels 13-15. */
+@media (min-width: 821px) and (min-aspect-ratio: 1/1) {
+  .appendix-merged [id] { scroll-margin-top: 8rem; }
+  .appendix-merged .doc-title { font-size: 48px; }
+  .appendix-merged .doc-lede { font-size: 20px; line-height: 1.5; }
+  .appendix-merged .doc-h2 { font-size: 30px; }
+  .appendix-merged .doc-h3 { font-size: 15px; }
+  .appendix-merged .m-sec-title { font-size: 20px; }
+  .appendix-merged .m-chapter-title { font-size: 26px; }
+  .appendix-merged .doc-text { font-size: 18px; line-height: 1.6; }
+  .appendix-merged .doc-eyebrow { font-size: 13px; }
+  .appendix-merged .src-title { font-size: 18px; line-height: 1.35; }
+  .appendix-merged .src-meta { font-size: 13px; }
+  .appendix-merged .src-byline { font-size: 14px; }
+  .appendix-merged .src-note { font-size: 15px; line-height: 1.55; }
+  .appendix-merged .chip { font-size: 13px; }
+}
