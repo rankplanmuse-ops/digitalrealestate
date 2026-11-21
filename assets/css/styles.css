@@ -7,15 +7,6 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Franklin Gothic Demi Cond';
-  src: url('../fonts/FranklinGothic-DemiCond.woff2') format('woff2'),
-       url('../fonts/FranklinGothic-DemiCond.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Gothic CG No1';
   src: url('../fonts/GothicCGNo1.woff2') format('woff2'),
        url('../fonts/GothicCGNo1.woff') format('woff');
@@ -32,7 +23,7 @@
   --bg: #111111;
   --ink: #000000;
   --white: #ffffff;
-  --font: 'Franklin Gothic Demi Cond', 'Gothic CG No1', 'Helvetica Neue', Arial, sans-serif;
+  --font: 'Gothic CG No1', 'Franklin Gothic Demi Cond', 'Helvetica Neue', Arial, sans-serif;
 
   --u: min(calc(100vw / 1280), calc(100svh / 764));
 
@@ -82,15 +73,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
   text-transform: uppercase;
   white-space: nowrap;
-  /* Franklin Gothic Demi Cond caps sit essentially centred in the line
-     box, so no baseline compensation is needed. (The previous font,
-     Gothic CG No1, needed a 0.18em push down.) */
-  padding-top: 0;
+  /* Gothic CG No1 carries extra space under the baseline, so centred caps
+     sit high. Pushing the content box down by 0.18em centres the caps. */
+  padding-top: 0.18em;
   /* Every button uses the header button's padding around the caps, whatever
-     its font size: cap height (0.667em in Franklin Gothic Demi Cond) plus a
-     fixed gap above and below, a fixed pad at the sides. Sizes only set
-     font-size. */
-  height: calc(0.667em + 2 * var(--btn-gap));
+     its font size: cap height (0.765em in Gothic CG No1) plus a fixed gap
+     above and below, a fixed pad at the sides. Sizes only set font-size. */
+  height: calc(0.765em + 2 * var(--btn-gap));
   padding-inline: var(--btn-pad);
   transition: background-color 0.2s ease;
 }
@@ -621,26 +610,3 @@ body[data-active="book"] .header-cta {
   .appendix-text br { display: none; }
 }
 
-/* Appendix version dropdown: the bar shows only "Appendix I"; II, III and
-   IV sit in a menu under it (hover, keyboard focus, or the caret button). */
-.nav-drop { position: relative; display: inline-flex; align-items: center; gap: 0.15em; }
-.nav-drop-btn {
-  background: none; border: 0; padding: 0 0.1em; cursor: pointer;
-  color: inherit; font: inherit; line-height: 1;
-}
-.nav-menu {
-  position: absolute;
-  top: calc(100% + 0.55em);
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  flex-direction: column;
-  gap: 0.55em;
-  background: var(--bg);
-  border: max(2px, calc(2.5 * var(--u))) solid var(--orange);
-  padding: 0.75em 1.1em;
-  z-index: 50;
-}
-.nav-drop:hover .nav-menu,
-.nav-drop:focus-within .nav-menu,
-.nav-drop.open .nav-menu { display: flex; }
