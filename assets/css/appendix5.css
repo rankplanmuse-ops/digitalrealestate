@@ -13,13 +13,16 @@ body.v5 .site-header {
   background: var(--bg);
   border-bottom: none;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: calc(23 * var(--u));
-  padding: calc(26 * var(--u)) calc(50 * var(--u)) calc(18 * var(--u));
+  /* Top and side spacing match the main page header geometry exactly:
+     logo and Buy button sit at 47.45u from the top, 50u from the sides. */
+  padding: calc(47.45 * var(--u)) calc(50 * var(--u)) calc(18 * var(--u));
 }
 body.v5 .site-header > * { position: static; transform: none; }
-body.v5 .nav { flex-wrap: nowrap; }
+/* On the main page the nav sits 3.95u above the logo top (43.5u vs 47.45u). */
+body.v5 .nav { flex-wrap: nowrap; margin-top: calc(-3.95 * var(--u)); }
 
 /* --- Layout and type ------------------------------------------------- */
 .v5-wrap {
